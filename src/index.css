@@ -215,41 +215,73 @@ font-size: 15px;}
 
 .container__historia {
   margin-top: 5rem;
+  padding: 2svw;
   display: flex;
   justify-content: space-between;
-  padding:2svw;
-}
-
-.group__images {
-  display: flex;
   flex-direction: column;
+  text-align: start;
 }
-
 
 .container__title {
   font-size: 100px;
-  max-width: 500px;
   font-weight: 400;
   font-family: BigNoodle;
+  margin-bottom: 2rem;
 }
 
+.container__texts__historia {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.container__texts {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+}
+
+.image__historia {
+  padding: 0px;
+  position: sticky;
+  top: 15svh;
+  height: 100svh; 
+  margin: 2svw;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  height: 100svh;
+}
+
+
 .text__title {
-  max-width: 500px;
   font-weight: 400;
   font-family: BigNoodle;
+  font-size: 32px;
 }
 
 .group__text {
   display: flex;
   flex-direction: column;
-  font-size: 20px;
-  font-family: RadioCanada;
   gap: 1rem;
+  font-family: RadioCanada;
+  text-align: start;
+  font-size: 20px;
 }
 
-.container__texts {
-  display: grid;
-  gap: 3rem;
-  
-  grid-template-columns: repeat(2, minmax(0, 1fr))
+.separacao {
+  position: absolute;
+  z-index: -1;
+  max-height: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: invert(100%);
+}
+
+.separacao img {
+  height: 100svh;
+  object-fit: cover;
 }
