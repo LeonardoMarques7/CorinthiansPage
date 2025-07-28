@@ -563,25 +563,19 @@ const Historia = () => {
 
 	return (
 		<div className="container__historia">
-			<div className="container__texts">
+			<div className="">
 				<h1 className="container__title">História</h1>
-				{timelineData.map((item, index) => (
-					<div key={index} className="container__texts">
-						<div className="group__text">
-							<h1 className="text__title">
-								{item.year} {item.title}
-							</h1>
-							<p className="">{item.text}</p>
+				<div className="container__texts">
+					{timelineData.map((item, index) => (
+						<div key={index} className="">
+							<div className="group__text">
+								<h1 className="text__title">
+									{item.year} {item.title}
+								</h1>
+								<p className="">{item.text}</p>
+							</div>
 						</div>
-					</div>
-				))}
-			</div>
-			<div className="sticky">
-				<div className="group__images">
-					<img src={fotoS} alt="S" />
-					<img src={fotoC} alt="C" />
-					<img src={fotoC} alt="C" />
-					<img src={fotoP} alt="P" />
+					))}
 				</div>
 			</div>
 		</div>
