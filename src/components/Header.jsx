@@ -38,16 +38,16 @@ const Header = () => {
 			/>
 			<ul className="container__links">
 				<li className="item__link">
-					<a href="">História</a>
+					<a href="#Historia">História</a>
 				</li>
 				<li className="item__link">
-					<a href="">Títulos</a>
+					<a href="#Titulos">Títulos</a>
 				</li>
 				<li className="item__link">
-					<a href="">Elenco</a>
+					<a href="#Elenco">Elenco</a>
 				</li>
 				<li className="item__link">
-					<a href="">Notícias</a>
+					<a href="#Noticias">Notícias</a>
 				</li>
 			</ul>
 		</nav>

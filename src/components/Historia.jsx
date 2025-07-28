@@ -1,12 +1,11 @@
 import fotoS from "../assets/imagens/s.png";
 import fotoC from "../assets/imagens/c.png";
 import fotoP from "../assets/imagens/p.png";
-import fotoLinhaDoTempo from "../assets/imagens/linha-do-tempo.png";
 import timelineData from "../assets/timelineData";
 
 const Historia = () => {
 	return (
-		<div className="container__historia">
+		<div className="container__historia" id="Historia">
 			<div className="">
 				<h1 className="container__title">História</h1>
 				<div className="container__texts__historia">
@@ -24,9 +23,7 @@ const Historia = () => {
 					</div>
 
 					<span className="image__historia">
-						<span className="separacao">
-							<img src={fotoLinhaDoTempo}></img>
-						</span>
+						<span className="separacao"></span>
 					</span>
 
 					<div className="container__texts right">

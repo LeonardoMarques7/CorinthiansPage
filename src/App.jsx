@@ -1,4 +1,5 @@
 import "./App.css";
+import { Route, Routes, Outlet } from "react-router-dom";
 import Header from "./components/Header";
 import Historia from "./components/Historia";
 import Main from "./components/Main";
