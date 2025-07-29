@@ -293,6 +293,7 @@ font-size: 15px;}
   padding: 5px;
   width: 40px;
   height: 40px;
+  top: 0svh;
   background-color: #242424;
   border-radius: 50%;
   border: 1px solid #fff;
@@ -303,7 +304,6 @@ font-size: 15px;}
   align-items: center;
   left: 50%;
   transform: translateX(-50%);
-  cursor: grab;
   z-index: 100;
   user-select: none;
   text-align: center;

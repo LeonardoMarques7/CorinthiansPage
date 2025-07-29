@@ -15,51 +15,29 @@ const Historia = () => {
 
 		if (!logo || !separacao || !ano) return;
 
-		let isDragging = false;
-		let offsetY = 0;
-
 		const totalAnos = 2025 - 1910;
 
-		const onMouseDown = (e) => {
-			isDragging = true;
-			offsetY = e.clientY - logo.getBoundingClientRect().top;
-			logo.style.cursor = "grabbing";
-		};
-
-		const onMouseMove = (e) => {
-			if (!isDragging) return;
-
-			const separacaoRect = separacao.getBoundingClientRect();
-			let newTop = e.clientY - separacaoRect.top - offsetY;
-
-			const maxTop = separacao.offsetHeight - logo.offsetHeight;
-			if (newTop < 0) newTop = 0;
-			if (newTop > maxTop) newTop = maxTop;
-
-			logo.style.top = `${newTop}px`;
-			ano.style.top = `${newTop + logo.offsetHeight / 62}px`;
-
-			const percent = newTop / maxTop;
-			const anoAtual = Math.round(1910 + totalAnos * percent);
-			ano.innerText = anoAtual;
-		};
-
-		const onMouseUp = () => {
-			isDragging = false;
-			logo.style.cursor = "grab";
-		};
+		// Fator para aumentar a área útil do scroll (quanto maior, mais espaçado)
+		const fatorEspaco = 1.5; // Tente ajustar (ex: 2, 3, 4) para ver o efeito
 
 		const onScroll = () => {
-			if (isDragging) return; // Não atualiza com scroll se estiver arrastando
-
+			// Scroll normal
 			const scrollTop = window.scrollY;
 			const scrollHeight = document.body.scrollHeight - window.innerHeight;
-			const scrollPercent = scrollTop / scrollHeight;
 
+			// Scroll percentual (0 a 1)
+			let scrollPercent = scrollTop / scrollHeight;
+
+			// Aplicando o fator para desacelerar a troca do ano
+			scrollPercent = Math.min(scrollPercent / fatorEspaco, 1);
+
+			// Cálculo do ano
 			const anoAtual = Math.round(1910 + totalAnos * scrollPercent);
 
-			// Converte o scroll em altura proporcional ao separador
+			// Calcular a altura máxima do movimento do logo
 			const maxTop = separacao.offsetHeight - logo.offsetHeight;
+
+			// Aplica o movimento no logo e no ano, usando o scrollPercent ajustado
 			const newTop = scrollPercent * maxTop;
 
 			logo.style.top = `${newTop}px`;
@@ -67,15 +45,12 @@ const Historia = () => {
 			ano.innerText = anoAtual;
 		};
 
-		logo.addEventListener("mousedown", onMouseDown);
-		window.addEventListener("mousemove", onMouseMove);
-		window.addEventListener("mouseup", onMouseUp);
 		window.addEventListener("scroll", onScroll);
 
+		// Atualiza na inicialização para refletir posição atual do scroll
+		onScroll();
+
 		return () => {
-			logo.removeEventListener("mousedown", onMouseDown);
-			window.removeEventListener("mousemove", onMouseMove);
-			window.removeEventListener("mouseup", onMouseUp);
 			window.removeEventListener("scroll", onScroll);
 		};
 	}, []);
