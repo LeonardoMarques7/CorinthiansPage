@@ -291,33 +291,40 @@ font-size: 15px;}
 .logo__separacao {
   position: absolute;
   padding: 5px;
-  width: 30px;
+  width: 40px;
+  height: 40px;
   background-color: #242424;
-  border-radius: 25px;
-  margin: 0 auto;
-  color: #fff;
-  display: block;
-  text-shadow: 0px 0px 10px #fff;
-  display: flex;
+  border-radius: 50%;
   border: 1px solid #fff;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 30px;
-  font-family: BigNoodle;
-  font-size: 20px;
   left: 50%;
   transform: translateX(-50%);
   cursor: grab;
   z-index: 100;
   user-select: none;
+  text-align: center;
+  font-family: BigNoodle;
 }
 
 .logo__separacao img {
-  width: 25px;
-  pointer-events: none;
-  z-index: -1;
-  position: fixed;
+  width: 30px;
   filter: invert(10%);
+  z-index: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.ano__separacao {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  z-index: 99;
+  text-shadow: 0 0 5px #fff;
+  line-height: 1;
 }
 
 .footer__texts__historia {

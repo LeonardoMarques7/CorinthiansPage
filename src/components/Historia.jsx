@@ -11,11 +11,14 @@ const Historia = () => {
 	useEffect(() => {
 		const logo = document.getElementById("logoseparacao");
 		const separacao = document.getElementById("separacao");
+		const ano = document.getElementById("anoSeparacao");
 
-		if (!logo || !separacao) return;
+		if (!logo || !separacao || !ano) return;
 
 		let isDragging = false;
 		let offsetY = 0;
+
+		const totalAnos = 2025 - 1910;
 
 		const onMouseDown = (e) => {
 			isDragging = true;
@@ -29,28 +32,51 @@ const Historia = () => {
 			const separacaoRect = separacao.getBoundingClientRect();
 			let newTop = e.clientY - separacaoRect.top - offsetY;
 
-			// Limites
 			const maxTop = separacao.offsetHeight - logo.offsetHeight;
 			if (newTop < 0) newTop = 0;
 			if (newTop > maxTop) newTop = maxTop;
 
 			logo.style.top = `${newTop}px`;
+			ano.style.top = `${newTop + logo.offsetHeight / 62}px`;
+
+			const percent = newTop / maxTop;
+			const anoAtual = Math.round(1910 + totalAnos * percent);
+			ano.innerText = anoAtual;
 		};
 
 		const onMouseUp = () => {
 			isDragging = false;
-
 			logo.style.cursor = "grab";
+		};
+
+		const onScroll = () => {
+			if (isDragging) return; // Não atualiza com scroll se estiver arrastando
+
+			const scrollTop = window.scrollY;
+			const scrollHeight = document.body.scrollHeight - window.innerHeight;
+			const scrollPercent = scrollTop / scrollHeight;
+
+			const anoAtual = Math.round(1910 + totalAnos * scrollPercent);
+
+			// Converte o scroll em altura proporcional ao separador
+			const maxTop = separacao.offsetHeight - logo.offsetHeight;
+			const newTop = scrollPercent * maxTop;
+
+			logo.style.top = `${newTop}px`;
+			ano.style.top = `${newTop + logo.offsetHeight / 2}px`;
+			ano.innerText = anoAtual;
 		};
 
 		logo.addEventListener("mousedown", onMouseDown);
 		window.addEventListener("mousemove", onMouseMove);
 		window.addEventListener("mouseup", onMouseUp);
+		window.addEventListener("scroll", onScroll);
 
 		return () => {
 			logo.removeEventListener("mousedown", onMouseDown);
 			window.removeEventListener("mousemove", onMouseMove);
 			window.removeEventListener("mouseup", onMouseUp);
+			window.removeEventListener("scroll", onScroll);
 		};
 	}, []);
 
@@ -73,14 +99,12 @@ const Historia = () => {
 					</div>
 					<span className="image__historia">
 						<div className="separacao" id="separacao">
-							<span
-								className="logo__separacao"
-								id="logoseparacao"
-								draggable={false}
-							>
+							<div className="logo__separacao" id="logoseparacao">
+								<span id="anoSeparacao" className="ano__separacao">
+									1910
+								</span>
 								<img src={fotoLogo} alt="" />
-								1910
-							</span>
+							</div>
 						</div>
 					</span>
 
