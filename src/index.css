@@ -125,6 +125,7 @@ main {
   width: 60svw;
   top: -10svh;
   height: auto;
+  position: sticky;
   filter: drop-shadow(0px 0px 25px #242424);
   position: absolute; right: 0;
   z-index: -1;
@@ -219,6 +220,7 @@ font-size: 15px;}
 .container__historia {
   margin-top: 5rem;
   padding: 2svw;
+  position: relative;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -234,29 +236,31 @@ font-size: 15px;}
 
 .container__texts__historia {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   width: 100%;
+  gap: 2rem;
+  position: relative;
 }
 
 .container__texts {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  width: 100%;
+  width: 45%;
+  /* 45% para espaço lateral */
 }
 
 .image__historia {
-  padding: 0px;
   position: sticky;
   top: 10svh;
-  height: 100svh; 
-  margin: 2svw;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
   height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5%;
+  /* apenas o necessário */
+  z-index: 0;
 }
 
 
@@ -295,7 +299,7 @@ font-size: 15px;}
   height: 40px;
   top: 0svh;
   background-color: #242424;
-  border-radius: 50%;
+  border-radius: 10px;
   border: 1px solid #fff;
   color: #fff;
   display: flex;
@@ -311,20 +315,12 @@ font-size: 15px;}
 }
 
 .logo__separacao img {
-  width: 30px;
+  width: 20px;
+  object-fit: cover;
   filter: invert(10%);
   z-index: 0;
   position: absolute;
   pointer-events: none;
-}
-
-.ano__separacao {
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  z-index: 99;
-  text-shadow: 0 0 5px #fff;
-  line-height: 1;
 }
 
 .footer__texts__historia {
@@ -359,4 +355,152 @@ font-size: 15px;}
 
 .historia__link:hover {
   color: #a10000;
+}
+
+/*  */
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 0;
+  width: 100%;
+}
+
+.timeline__item {
+  width: 50%;
+  margin: 4svh 0;
+  padding: 1rem 2rem;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  position: relative;
+}
+
+.timeline:last-child .timeline__item{
+  margin-top: 0;
+  margin-bottom: 4svh;
+}
+
+.timeline__item.left {
+  text-align: start;
+  left: 0;
+}
+
+.timeline__item.right {
+  text-align: start;
+  color: #242424;
+  background-color: #fff;
+}
+
+.historia__container__image {
+  position: absolute;
+  right: 0px;
+  height: 100%;
+}
+
+.historia__image {
+  width: 40svw;
+    top: 10px;
+    height: auto;
+    position: sticky;
+    filter: drop-shadow(0px 0px 25px #242424);
+
+    z-index: -1;
+  }
+
+/* Postagens */
+
+.container__posts {
+  position: absolute;
+  width: 35svw;
+  line-height: 1.2;
+  gap: 1rem;
+  display: flex;
+  right: 2svw;
+}
+
+.timeline__posts {
+  display: flex;
+  flex-direction: column;
+  gap: 25svh;
+}
+
+.container__posts .card {
+  max-height: 500px;
+  font-weight: 300;
+  gap: 1rem;
+  font-size: 15px;
+  max-width: 500px;
+}
+
+.card.post__left {
+  text-align: center;
+  left: 0;
+  min-width: 300px;
+  margin-left: 10svw;
+  margin-bottom: 0;
+}
+
+.card__header {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.card__hashtag {
+  font-size: 14px;
+  gap: 1rem;
+  font-family: RadioCanada;
+  font-weight: 500;
+}
+
+.card .card__header .card__image {
+  max-height: 500px;
+  min-width: 300px;
+  max-width: 25svw;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: #242424 0px 0px 50px;
+  width: auto;
+}
+
+.card__title {
+  font-family: RadioCanada;
+}
+
+.card__badge {
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  left: 1rem;
+  align-items: start;
+  gap: .5rem;
+}
+
+.card__image-wrapper .card__badge img {
+  width: 25px;
+}
+
+.post__like {
+  max-width: auto;
+}
+
+
+
+.card__image-wrapper {
+  background: linear-gradient(90deg, #313131, #ffffff);
+  /* Gradiente da borda */
+  padding: 4px;
+  /* Espessura da borda */
+  position: relative;
+  width: min-content;
+  display: inline-block;
+  border-radius: 12px;
+  /* se quiser arredondado */
+}
+
+.card__image {
+  display: block;
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
 }

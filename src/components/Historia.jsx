@@ -2,23 +2,28 @@ import fotoS from "../assets/imagens/s.png";
 import fotoC from "../assets/imagens/c.png";
 import fotoP from "../assets/imagens/p.png";
 import timelineData from "../assets/timelineData";
+import postagensData from "../assets/postagensData";
 // import logoTime from "../assets/imagens/logo__pequena__normal.png";
-import { Trophy } from "lucide-react";
-import fotoLogo from "../assets/imagens/emblema__header.png";
+import {
+	Heart,
+	HeartIcon,
+	Save,
+	Trophy,
+	MessageSquare,
+	Bookmark,
+} from "lucide-react";
+import fotoLogo from "../assets/imagens/logo__cp.png";
+import EmblemaCorinthiansGrande from "../assets/imagens/emblema__main__3d.png";
 import { useEffect } from "react";
+import foto1 from "../assets/imagens/foto1.png";
+import postLike from "../assets/imagens/like.png";
 
 const Historia = () => {
 	useEffect(() => {
 		const logo = document.getElementById("logoseparacao");
 		const separacao = document.getElementById("separacao");
-		const ano = document.getElementById("anoSeparacao");
 
-		if (!logo || !separacao || !ano) return;
-
-		const totalAnos = 2025 - 1910;
-
-		// Fator para aumentar a área útil do scroll (quanto maior, mais espaçado)
-		const fatorEspaco = 1.5; // Tente ajustar (ex: 2, 3, 4) para ver o efeito
+		if (!logo || !separacao) return;
 
 		const onScroll = () => {
 			// Scroll normal
@@ -28,12 +33,6 @@ const Historia = () => {
 			// Scroll percentual (0 a 1)
 			let scrollPercent = scrollTop / scrollHeight;
 
-			// Aplicando o fator para desacelerar a troca do ano
-			scrollPercent = Math.min(scrollPercent / fatorEspaco, 1);
-
-			// Cálculo do ano
-			const anoAtual = Math.round(1910 + totalAnos * scrollPercent);
-
 			// Calcular a altura máxima do movimento do logo
 			const maxTop = separacao.offsetHeight - logo.offsetHeight;
 
@@ -41,8 +40,6 @@ const Historia = () => {
 			const newTop = scrollPercent * maxTop;
 
 			logo.style.top = `${newTop}px`;
-			ano.style.top = `${newTop + logo.offsetHeight / 2}px`;
-			ano.innerText = anoAtual;
 		};
 
 		window.addEventListener("scroll", onScroll);
@@ -59,43 +56,52 @@ const Historia = () => {
 		<div className="container__historia" id="Historia">
 			<div className="">
 				<h1 className="container__title">História</h1>
-				<div className="container__texts__historia">
-					<div className="container__texts left">
-						{timelineData
-							.filter((_, i) => i % 2 === 0)
-							.map((item, index) => (
-								<div key={index} className="group__text">
-									<h1 className="text__title">
-										{item.year} {item.title}
-									</h1>
-									<p>{item.text}</p>
-								</div>
-							))}
-					</div>
-					<span className="image__historia">
-						<div className="separacao" id="separacao">
-							<div className="logo__separacao" id="logoseparacao">
-								<span id="anoSeparacao" className="ano__separacao">
-									1910
-								</span>
-								<img src={fotoLogo} alt="" />
-							</div>
-						</div>
-					</span>
 
-					<div className="container__texts right">
-						{timelineData
-							.filter((_, i) => i % 2 !== 0)
-							.map((item, index) => (
-								<div key={index} className="group__text">
-									<h1 className="text__title">
+				<div className="container__texts__historia">
+					<section className="container__posts">
+						<span className="timeline__posts">
+							{postagensData.map((item, index) => (
+								<div
+									className={`card ${
+										index % 2 === 0 ? "post__left" : "post__right"
+									}`}
+									key={index}
+								>
+									<div className="card__header">
+										<div className="card__image-wrapper">
+											<img
+												src={item.image}
+												alt="Postagem 1"
+												className="card__image"
+											/>
+											<div className="card__badge">
+												<img src={postLike} alt="" />
+											</div>
+										</div>
+									</div>
+								</div>
+							))}
+						</span>
+					</section>
+					<div className="timeline">
+						{timelineData.map((item, index) => (
+							<div
+								key={index}
+								className={`timeline__item ${
+									index % 2 === 0 ? "left" : "right"
+								}`}
+							>
+								<div className="content">
+									<h1>
 										{item.year} {item.title}
 									</h1>
 									<p>{item.text}</p>
 								</div>
-							))}
+							</div>
+						))}
 					</div>
 				</div>
+
 				<div className="footer__texts__historia">
 					<hr />
 					<span className="historia__subtitle">
