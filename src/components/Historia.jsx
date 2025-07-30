@@ -1,3 +1,9 @@
+import {
+	Accordion,
+	AccordionContent,
+	AccordionItem,
+	AccordionTrigger,
+} from "@/components/ui/accordion";
 import fotoS from "../assets/imagens/s.png";
 import fotoC from "../assets/imagens/c.png";
 import fotoP from "../assets/imagens/p.png";
@@ -92,10 +98,16 @@ const Historia = () => {
 								}`}
 							>
 								<div className="content">
-									<h1>
-										{item.year} {item.title}
-									</h1>
-									<p>{item.text}</p>
+									<Accordion collapsible defaultValue="item-1">
+										<AccordionItem value="item-1">
+											<AccordionTrigger className="accordion__historia">
+												{item.year} {item.title}
+											</AccordionTrigger>
+											<AccordionContent className="accordion__content">
+												{item.text}
+											</AccordionContent>
+										</AccordionItem>
+									</Accordion>
 								</div>
 							</div>
 						))}
