@@ -428,6 +428,7 @@ font-size: 15px;}
   max-height: 500px;
   font-weight: 300;
   gap: 1rem;
+  position: relative;
   font-size: 15px;
   max-width: 500px;
 }
@@ -442,9 +443,23 @@ font-size: 15px;}
 
 .image__postagem {
   position: absolute;
+  left: 0;
+  height: 50px;
+  background-color: #fff;
+  z-index: 1;
+  padding: 5px;
+  height: 50px;
+  border: 5px solid #242424;
+  border-radius: 0px 10px 0px 10px;
+  bottom: 0;
+}
+
+.image__postagem img {
+  border-radius: 10px;
 }
 
 .card__header {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: .5rem;

@@ -18,6 +18,7 @@ import { useEffect } from "react";
 import foto1 from "../assets/imagens/foto1.png";
 import fotoPostagem from "../assets/imagens/postagem.png";
 import postLike from "../assets/imagens/like.png";
+import emblema from "../assets/imagens/emblema__header.png";
 
 const Historia = () => {
 	useEffect(() => {
@@ -69,12 +70,8 @@ const Historia = () => {
 									key={index}
 								>
 									<div className="card__header">
+										<img src={emblema} className="image__postagem" alt="" />
 										<div className="card__image-wrapper">
-											<img
-												src={fotoPostagem}
-												className="image__postagem"
-												alt=""
-											/>
 											<img
 												src={item.image}
 												alt="Postagem 1"
