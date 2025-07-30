@@ -440,6 +440,10 @@ font-size: 15px;}
   margin-bottom: 0;
 }
 
+.image__postagem {
+  position: absolute;
+}
+
 .card__header {
   display: flex;
   flex-direction: column;

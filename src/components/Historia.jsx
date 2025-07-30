@@ -16,6 +16,7 @@ import fotoLogo from "../assets/imagens/logo__cp.png";
 import EmblemaCorinthiansGrande from "../assets/imagens/emblema__main__3d.png";
 import { useEffect } from "react";
 import foto1 from "../assets/imagens/foto1.png";
+import fotoPostagem from "../assets/imagens/postagem.png";
 import postLike from "../assets/imagens/like.png";
 
 const Historia = () => {
@@ -70,13 +71,15 @@ const Historia = () => {
 									<div className="card__header">
 										<div className="card__image-wrapper">
 											<img
+												src={fotoPostagem}
+												className="image__postagem"
+												alt=""
+											/>
+											<img
 												src={item.image}
 												alt="Postagem 1"
 												className="card__image"
 											/>
-											<div className="card__badge">
-												<img src={postLike} alt="" />
-											</div>
 										</div>
 									</div>
 								</div>
