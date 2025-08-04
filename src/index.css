@@ -463,6 +463,10 @@ font-size: 15px;}
 
 /* Postagens */
 
+.button {
+  cursor: pointer;
+}
+
 .container__posts {
   position: absolute;
   width: 35svw;

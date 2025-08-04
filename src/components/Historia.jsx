@@ -25,39 +25,27 @@ import foto1 from "../assets/imagens/foto1.png";
 import fotoPostagem from "../assets/imagens/postagem.png";
 import postLike from "../assets/imagens/like.png";
 import emblema from "../assets/imagens/emblema__header.png";
+import ScrollReveal from "scrollreveal";
 
 const Historia = () => {
 	useEffect(() => {
-		const logo = document.getElementById("logoseparacao");
-		const separacao = document.getElementById("separacao");
+		ScrollReveal().reveal(".post__left", {
+			origin: "left",
+			distance: "50px",
+			duration: 200,
+			easing: "ease-in-out",
+			interval: 100, // atraso entre itens
+			reset: false, // true se quiser que a animação repita ao rolar
+		});
 
-		if (!logo || !separacao) return;
-
-		const onScroll = () => {
-			// Scroll normal
-			const scrollTop = window.scrollY;
-			const scrollHeight = document.body.scrollHeight - window.innerHeight;
-
-			// Scroll percentual (0 a 1)
-			let scrollPercent = scrollTop / scrollHeight;
-
-			// Calcular a altura máxima do movimento do logo
-			const maxTop = separacao.offsetHeight - logo.offsetHeight;
-
-			// Aplica o movimento no logo e no ano, usando o scrollPercent ajustado
-			const newTop = scrollPercent * maxTop;
-
-			logo.style.top = `${newTop}px`;
-		};
-
-		window.addEventListener("scroll", onScroll);
-
-		// Atualiza na inicialização para refletir posição atual do scroll
-		onScroll();
-
-		return () => {
-			window.removeEventListener("scroll", onScroll);
-		};
+		ScrollReveal().reveal(".post__right", {
+			origin: "right",
+			distance: "50px",
+			duration: 500,
+			easing: "ease-in-out",
+			interval: 100,
+			reset: false,
+		});
 	}, []);
 
 	return (
@@ -100,7 +88,7 @@ const Historia = () => {
 								<div className="content">
 									<Accordion
 										collapsible
-										defaultValue={index % 2 === 0 ? "item-1" : undefined} // ← controla aberto/fechado
+										defaultValue={index % 2 === 0 ? "item-1" : undefined}
 									>
 										<AccordionItem value="item-1">
 											<AccordionTrigger className="accordion__historia">

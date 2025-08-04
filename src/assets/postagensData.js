@@ -49,7 +49,6 @@ const postagensData =[
   {
     image: foto10,
   },
-    ,
   {
     image: foto11,
   },
