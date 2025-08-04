@@ -70,12 +70,6 @@ const postagensData =[
   ,
   {
     image: foto17,
-  },
-  {
-    image: foto18,
-  },
-  {
-    image: foto19,
   }
 ]
 

@@ -1,31 +1,70 @@
+import { useEffect } from "react";
+
+import { Toaster, toast } from "sonner";
 import {
 	Accordion,
 	AccordionContent,
 	AccordionItem,
 	AccordionTrigger,
 } from "@/components/ui/accordion";
-import fotoS from "../assets/imagens/s.png";
-import fotoC from "../assets/imagens/c.png";
-import fotoP from "../assets/imagens/p.png";
 import timelineData from "../assets/timelineData";
 import postagensData from "../assets/postagensData";
-// import logoTime from "../assets/imagens/logo__pequena__normal.png";
-import {
-	Heart,
-	HeartIcon,
-	Save,
-	Trophy,
-	MessageSquare,
-	Bookmark,
-} from "lucide-react";
-import fotoLogo from "../assets/imagens/logo__cp.png";
-import EmblemaCorinthiansGrande from "../assets/imagens/emblema__main__3d.png";
-import { useEffect } from "react";
-import foto1 from "../assets/imagens/foto1.png";
-import fotoPostagem from "../assets/imagens/postagem.png";
-import postLike from "../assets/imagens/like.png";
 import emblema from "../assets/imagens/emblema__header.png";
 import ScrollReveal from "scrollreveal";
+
+import { Button } from "@/components/ui/button"; // botão do shadcn
+import { ArrowBigUp, Bell, ChevronUpIcon, Quote } from "lucide-react";
+import ToastRonaldo from "./ui/ToastRonaldo";
+import ronaldoImg from "../assets/imagens/foto__ronaldo.png";
+import socratesImg from "../assets/imagens/foto__socrates.png";
+import marcelinhoImg from "../assets/imagens/foto__marcelinho.png";
+import titeImg from "../assets/imagens/foto__tite.png";
+import robertoImg from "../assets/imagens/foto__roberto.png";
+
+// ... seus outros imports
+const contatosLendarios = [
+	{
+		nome: "Sócrates",
+		foto: socratesImg,
+		mensagens: [
+			'"Ganhar ou perder, mas sempre com democracia"', // Símbolo da Democracia Corinthiana :contentReference[oaicite:1]{index=1}
+			'"O Corinthians é muito mais do que um clube… é uma força de expressão"', // Frase icônica retratada em homenagens atuais :contentReference[oaicite:2]{index=2}
+		],
+	},
+	{
+		nome: "Marcelinho Carioca",
+		foto: marcelinhoImg,
+		mensagens: [
+			'"Aqui é minha segunda pele"', // Declarou depois de se apaixonar pelo clube :contentReference[oaicite:3]{index=3}
+			'"Quero marcar minha passagem aqui"', // Palavras da sua apresentação no Parque São Jorge :contentReference[oaicite:4]{index=4}
+		],
+	},
+	{
+		nome: "Ronaldo Fenômeno",
+		foto: ronaldoImg,
+		mensagens: [
+			'"Agora eu sou mais um louco no bando"', // Falou ao adotar a Fiel como sua torcida :contentReference[oaicite:5]{index=5}
+			'"A torcida do Corinthians é a melhor do mundo!"', // Declarou em entrevista elogiando os fãs :contentReference[oaicite:6]{index=6}
+		],
+	},
+	{
+		nome: "Tite",
+		foto: titeImg,
+		mensagens: [
+			'"O vencedor é um cara persistente"', // Mantra usado nas preleções em 2011 :contentReference[oaicite:7]{index=7}
+			'"Esse time tem alma de competição"', // Comentou sobre o espírito do elenco aclame :contentReference[oaicite:8]{index=8}
+			'"Ser corinthiano é acreditar que tudo é possível"', // Valoriza fé e confiança no clube :contentReference[oaicite:9]{index=9}
+		],
+	},
+	{
+		nome: "Roberto Rivellino",
+		foto: robertoImg,
+		mensagens: [
+			'"O Corinthians representa tudo na minha vida"', // Disse em fórum “Meu Timão” sobre sua paixão :contentReference[oaicite:10]{index=10}
+			'"Não me considero o melhor, mas meu nome está incluído entre os maiores"', // Autoavaliação com humildade :contentReference[oaicite:11]{index=11}
+		],
+	},
+];
 
 const Historia = () => {
 	useEffect(() => {
@@ -34,8 +73,8 @@ const Historia = () => {
 			distance: "50px",
 			duration: 200,
 			easing: "ease-in-out",
-			interval: 100, // atraso entre itens
-			reset: false, // true se quiser que a animação repita ao rolar
+			interval: 100,
+			reset: false,
 		});
 
 		ScrollReveal().reveal(".post__right", {
@@ -48,8 +87,27 @@ const Historia = () => {
 		});
 	}, []);
 
+	const chamadaRonaldo = () => {
+		const contato =
+			contatosLendarios[Math.floor(Math.random() * contatosLendarios.length)];
+
+		// Escolhe uma mensagem aleatória desse contato
+		const mensagem =
+			contato.mensagens[Math.floor(Math.random() * contato.mensagens.length)];
+
+		toast.custom(() => (
+			<div className="toast__whatsapp">
+				<img src={contato.foto} alt={contato.nome} />
+				<div className="toast__whatsapp__texts">
+					<span>{contato.nome}</span>
+					<p>{mensagem}</p>
+				</div>
+			</div>
+		));
+	};
+
 	return (
-		<div className="container__historia" id="Historia">
+		<div className="container__historia relative w-full" id="Historia">
 			<div className="">
 				<h1 className="container__title">História</h1>
 
@@ -120,6 +178,13 @@ const Historia = () => {
 					</span>
 				</div>
 			</div>
+			<Button
+				onClick={chamadaRonaldo}
+				className="button__trigger pointer-events-none"
+			>
+				<Quote />
+			</Button>
+			<Toaster position="top-right" className="toaster" />
 		</div>
 	);
 };

@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
 
 * {
   margin: 0;
@@ -262,6 +261,12 @@ font-size: 15px;}
   font-size: 2rem;
 }
 
+.accordion__historia:focus-visible {
+  outline: 1px solid #ccc;
+  border-radius: 5px;
+  padding: .5rem 1rem;
+}
+
 .accordion__cotent {
   height: auto;
   interpolate-size: allow-keywords;
@@ -429,6 +434,10 @@ font-size: 15px;}
   font-size: 2rem;
 }
 
+.timeline__item:active {
+  outline: none;
+}
+
 .timeline:last-child .timeline__item{
   margin-top: 0;
   margin-bottom: 4svh;
@@ -462,9 +471,110 @@ font-size: 15px;}
   }
 
 /* Postagens */
+.toast__whatsapp {
+  background-color: #202C33;
+  border: 1px solid #2A3942;
+  border-radius: 12px;
+  display: flex;
+  margin-top: 10svh;
+  align-items: center;
+  gap: 0.75rem;
+  height: auto;
+  margin-bottom: 10svh;
+  padding: 0.75rem;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.toast__whatsapp img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.toast__whatsapp__texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.toast__whatsapp__texts span {
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  font-family: BigNoodle;
+}
+
+.toast__whatsapp__texts p {
+  color: #D1D7DB;
+  font-size: 0.9rem;
+  font-family: RadioCanada;
+  margin: 0;
+}
 
 .button {
   cursor: pointer;
+}
+
+/* .button__trigger__top {
+  position: sticky;
+  bottom: 2svh;
+  cursor: pointer;
+  left: 91svw;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #460202;
+  padding: 20px;
+  border-radius: 50px;
+} */
+
+.botao-topo {
+  position: fixed;
+  bottom: 2svh;
+  cursor: pointer;
+  right: 5svw;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #202C33;
+  padding: 20px;
+  transition: ease-in-out .5s;
+  border-radius: 50px;
+}
+
+.botao-topo.oculto {
+  opacity: 0;
+  pointer-events: none;
+  /* não clicável quando invisível */
+}
+
+.botao-topo:hover {
+  background: #5f0000;
+}
+
+.button__trigger {
+  position: sticky;
+  bottom: 2svh;
+  cursor: pointer;
+  left: 98svw;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #202C33;
+  padding: 20px;
+  transition: ease-in-out .5s;
+  border-radius: 50px;
+}
+
+.button__trigger:hover {
+  background-color: #161f24;
 }
 
 .container__posts {
