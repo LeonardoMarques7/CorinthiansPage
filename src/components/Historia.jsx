@@ -106,6 +106,24 @@ const Historia = () => {
 		));
 	};
 
+	// Mostrar o botão ao rolar a página
+	useEffect(() => {
+		const aoRolar = () => {
+			if (window.scrollY > 400) {
+				setMostrarBotao(true);
+			} else {
+				setMostrarBotao(false);
+			}
+		};
+		window.addEventListener("scroll", aoRolar);
+		return () => window.removeEventListener("scroll", aoRolar);
+	}, []);
+
+	// Subir suavemente até o topo
+	const subirAoTopo = () => {
+		window.scrollTo({ top: 0, behavior: "smooth" });
+	};
+
 	return (
 		<div className="container__historia relative w-full" id="Historia">
 			<div className="">
@@ -178,12 +196,17 @@ const Historia = () => {
 					</span>
 				</div>
 			</div>
-			<Button
-				onClick={chamadaRonaldo}
-				className="button__trigger pointer-events-none"
-			>
-				<Quote />
-			</Button>
+			<span className="container__actions">
+				<Button className={`botao-topo`} onClick={subirAoTopo}>
+					<ChevronUpIcon size={20} />
+				</Button>
+				<Button
+					onClick={chamadaRonaldo}
+					className="button__trigger pointer-events-none"
+				>
+					<Quote />
+				</Button>
+			</span>
 			<Toaster position="top-right" className="toaster" />
 		</div>
 	);
