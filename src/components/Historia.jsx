@@ -98,7 +98,10 @@ const Historia = () => {
 								}`}
 							>
 								<div className="content">
-									<Accordion collapsible defaultValue="item-1">
+									<Accordion
+										collapsible
+										defaultValue={index % 2 === 0 ? "item-1" : undefined} // ← controla aberto/fechado
+									>
 										<AccordionItem value="item-1">
 											<AccordionTrigger className="accordion__historia">
 												{item.year} {item.title}

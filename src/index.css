@@ -258,6 +258,7 @@ font-size: 15px;}
   justify-content: space-between;
   width: 100%;
   align-items: center;
+  interpolate-size: allow-keywords;
   font-size: 2rem;
 }
 
@@ -466,6 +467,7 @@ font-size: 15px;}
   position: absolute;
   width: 35svw;
   line-height: 1.2;
+  height: 100%;
   gap: 1rem;
   display: flex;
   right: 2svw;
@@ -485,6 +487,12 @@ font-size: 15px;}
   font-size: 15px;
   max-width: 500px;
 }
+
+.container__posts .card:last-child {
+  position: sticky;
+  top: 20svh;
+}
+
 
 .card.post__left {
   text-align: center;

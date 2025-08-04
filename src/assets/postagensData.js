@@ -77,7 +77,7 @@ const postagensData =[
   },
   {
     image: foto19,
-  },
+  }
 ]
 
 
