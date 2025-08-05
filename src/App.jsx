@@ -5,6 +5,7 @@ import Main from "./components/Main";
 import Titulos from "./components/Titulos";
 import Separacao from "./components/Separacao";
 import Elenco from "./components/Elenco";
+import Noticias from "./components/Noticias";
 
 function App() {
 	return (
@@ -29,6 +30,12 @@ function App() {
 
 			{/* Elenco do Clube */}
 			<Elenco />
+
+			{/* Divisória */}
+			<Separacao />
+
+			{/* Notícias */}
+			<Noticias />
 		</>
 	);
 }

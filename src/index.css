@@ -895,3 +895,79 @@ font-size: 15px;}
   align-items: center;
   box-shadow: 0px -10px 0px 0px #ddd;
 }
+
+/* Notícias */
+
+.container__noticias {
+  padding: 2svw;
+  font-family: radioCanada;
+}
+
+.container__noticias__title {
+  font-size: 100px;
+  font-weight: 400;
+  font-family: BigNoodle;
+}
+
+.feed__noticias {
+  display: flex;
+  flex-direction: column;
+  gap: 10svh;
+}
+
+.card__noticia {
+  display: flex;
+  gap: 2rem;
+  font-size: 20px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+.card__noticia img {
+  width: 25svw;
+  z-index: 9;
+  object-fit: cover;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.noticia__title {
+  padding-top: 2rem;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 50px;
+  font-family: BigNoodle;
+}
+
+.noticia__subtitle p {
+  color: #808080;
+  margin-bottom: 1rem;
+}
+
+.noticia__paragraph {
+  max-width: 50svw;
+}
+
+.texts__noticia {
+  position: relative;
+}
+
+.actions__creditos {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  bottom: 1rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  padding: 0 2svw;
+}
+
+.actions img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
