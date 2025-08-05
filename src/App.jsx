@@ -36,6 +36,9 @@ function App() {
 
 			{/* Notícias */}
 			<Noticias />
+
+			{/* Divisória */}
+			<Separacao />
 		</>
 	);
 }

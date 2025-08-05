@@ -43,24 +43,28 @@ const Noticias = () => {
 							alt="Imagem da Notícia"
 						/>
 						<div className="texts__noticia">
-							<h2 className="noticia__title">
-								Futebol masculino: Timão inicia preparação para encarar Botafogo
-								fora de casa
-							</h2>
-							<span className="noticia__subtitle">
-								Elenco terá mais um treino nesta sexta (25) antes da viagem ao
-								Rio de Janeiro
-								<p className="date">24/07/2025 15h06 Assessoria de imprensa</p>
-							</span>
-							<p className="noticia__paragraph">
-								Na manhã desta quinta-feira (24), no CT Dr. Joaquim Grava, o
-								Corinthians se reapresentou após o empate sem gols diante do
-								Cruzeiro, na Neo Química Arena, pelo Campeonato Brasileiro, e
-								iniciou a preparação para o próximo compromisso válido pela
-								competição nacional. Sábado (26), às 18h30, no Estádio Nilton
-								Santos, no Rio de Janeiro-RJ, pela 17ª rodada, o Timão visitará
-								o Botafogo.
-							</p>
+							<div className="conteudo__noticia">
+								<h2 className="noticia__title">
+									Futebol masculino: Timão inicia preparação para encarar
+									Botafogo fora de casa
+								</h2>
+								<span className="noticia__subtitle">
+									Elenco terá mais um treino nesta sexta (25) antes da viagem ao
+									Rio de Janeiro
+									<p className="date">
+										24/07/2025 15h06 Assessoria de imprensa
+									</p>
+								</span>
+								<p className="noticia__paragraph">
+									Na manhã desta quinta-feira (24), no CT Dr. Joaquim Grava, o
+									Corinthians se reapresentou após o empate sem gols diante do
+									Cruzeiro, na Neo Química Arena, pelo Campeonato Brasileiro, e
+									iniciou a preparação para o próximo compromisso válido pela
+									competição nacional. Sábado (26), às 18h30, no Estádio Nilton
+									Santos, no Rio de Janeiro-RJ, pela 17ª rodada, o Timão
+									visitará o Botafogo.
+								</p>
+							</div>
 							<div className="actions__creditos">
 								Foto: Rodrigo Coca/Agência Corinthians
 							</div>
