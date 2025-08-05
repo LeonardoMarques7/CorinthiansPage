@@ -982,17 +982,20 @@ font-size: 15px;}
 
 .container__footer {
   position: relative;
-  height: auto;
+  max-height: 500px;
+  height: fit-content;
+  display: flex;
+  overflow: visible;
+  /* deixa a imagem aparecer fora do container */
 }
 
-.footer__image{
-  width: 25svw;
+.footer__image {
+  width: 30svw;
   left: -5svw;
-  height: auto;
-  transform: translateY(6svh);
-  position: sticky;
-  filter: drop-shadow(0px 0px 25px #242424);
   position: absolute;
+  top: -10svh;
+  /* ajusta para sair mais ou menos */
+  filter: drop-shadow(0px 0px 25px #242424);
   right: 0;
   z-index: -1;
 }
@@ -1000,7 +1003,7 @@ font-size: 15px;}
 .footer__texts{
   position: absolute;
   right: 2svw;
-  top: 10svh;
+  top: 20svh;
 }
 
 .footer__title {
