@@ -6,6 +6,7 @@ import Titulos from "./components/Titulos";
 import Separacao from "./components/Separacao";
 import Elenco from "./components/Elenco";
 import Noticias from "./components/Noticias";
+import Footer from "./components/Footer";
 
 function App() {
 	return (
@@ -39,6 +40,9 @@ function App() {
 
 			{/* Divisória */}
 			<Separacao />
+
+			{/* Footer */}
+			<Footer />
 		</>
 	);
 }
