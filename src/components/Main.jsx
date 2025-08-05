@@ -1,10 +1,9 @@
 import React from "react";
 import EmblemaCorinthiansGrande from "../assets/imagens/emblema__main__3d.png";
-import LogoBrasileirao from "../assets/imagens/logo__brasileirao__novo.png";
-import LogoCopaDoBrasil from "../assets/imagens/logo__copa-do-brasil.png";
 import LogoCorinthiansPequena from "../assets/imagens/logo__pequena__normal.png";
 import LogoBotafogo from "../assets/imagens/logo__botafogo.png";
 import LogoPalmeiras from "../assets/imagens/logo__palmeiras.png";
+import LogoJuventude from "../assets/imagens/logo__juventude.png";
 import faixas from "../assets/imagens/faixas.png";
 
 const Main = () => {
@@ -19,53 +18,62 @@ const Main = () => {
 				</div>
 				<div className="main__partidas">
 					<div className="badge__partida">
-						<span className="icon__competicao">Brasileirão</span>
+						<span className="icon__competicao">Copa do Brasil</span>
 						<div className="info__times">
-							<div className="time-1">
-								<p>COR</p>
-								<img
-									src={LogoCorinthiansPequena}
-									alt="Logo pequena do Corinthians"
-								/>
+							<div className="main__partida">
+								<div className="time-1">
+									<p>COR</p>
+									<img
+										src={LogoCorinthiansPequena}
+										alt="Logo pequena do Corinthians"
+									/>
+								</div>
+								<span className="x-mark">X</span>
+								<div className="time-2">
+									<img src={LogoPalmeiras} alt="Logo pequena do Palmeiras" />
+									<p>PAL</p>
+								</div>
 							</div>
-							<span className="x-mark">X</span>
-							<div className="time-2">
-								<img src={LogoBotafogo} alt="Logo pequena do Botafogo" />
-								<p>BOT</p>
+							<div className="footer__partida">
+								<div className="data">
+									<span className="data">06/08/2025 21H30</span>
+								</div>
+								<span className="local">SP - São Paulo - Allianz Parque</span>
 							</div>
 						</div>
-						<div className="data-local">
-							<span className="data">26/07/2025 18H30</span>
-							<span className="local">RJ - Rio de Janeiro - Nilton Santos</span>
+					</div>
+					<div className="badge__partida">
+						<span className="icon__competicao">Brasileirão</span>
+						<div className="info__times">
+							<div className="main__partida">
+								<div className="time-1">
+									<p>COR</p>
+									<img
+										src={LogoCorinthiansPequena}
+										alt="Logo pequena do Corinthians"
+									/>
+								</div>
+								<span className="x-mark">X</span>
+								<div className="time-2">
+									<img src={LogoJuventude} alt="Logo do Juventude" />
+									<p>JUT</p>
+								</div>
+							</div>
+							<div className="footer__partida">
+								<div className="data">
+									<span className="data">11/08/2025 20h00</span>
+								</div>
+								<span className="local">
+									RS - Caxias do Sul - Alfredo Jaconi
+								</span>
+							</div>
 						</div>
 					</div>
 					{/*  */}
-					<div className="badge__partida">
-						<span className="icon__competicao">Copa do Brasil</span>
-						<div className="info__times">
-							<div className="time-1">
-								<p>COR</p>
-								<img
-									src={LogoCorinthiansPequena}
-									alt="Logo pequena do Corinthians"
-								/>
-							</div>
-							<span className="x-mark">X</span>
-							<div className="time-2">
-								<img src={LogoPalmeiras} alt="Logo pequena do Palmeiras" />
-								<p>PAL</p>
-							</div>
-						</div>
-						<div className="data-local">
-							<span className="data">30/07/2025 21h30</span>
-							<span className="local">SP - ITAQUERA - Neo Química Arena</span>
-						</div>
-					</div>
 					<p className="text__expandir">Ver todas as partidas</p>
 				</div>
 				<img
-					className="main__image
-                "
+					className="main__image"
 					src={EmblemaCorinthiansGrande}
 					alt="Emblema do corinthians 3D"
 				/>
