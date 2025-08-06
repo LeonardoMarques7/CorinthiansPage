@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 
 function App() {
 	return (
-		<>
+		<div className="page-content">
 			{/* Barra de Navegação */}
 			<Header />
 
@@ -43,7 +43,7 @@ function App() {
 
 			{/* Footer */}
 			<Footer />
-		</>
+		</div>
 	);
 }
 

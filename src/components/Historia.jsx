@@ -11,7 +11,6 @@ import timelineData from "../assets/timelineData";
 import postagensData from "../assets/postagensData";
 import emblema from "../assets/imagens/emblema__header.png";
 import ScrollReveal from "scrollreveal";
-
 import { Button } from "@/components/ui/button"; // botão do shadcn
 import { ArrowBigUp, Bell, ChevronUpIcon, Quote } from "lucide-react";
 import ToastRonaldo from "./ui/ToastRonaldo";
@@ -20,6 +19,7 @@ import socratesImg from "../assets/imagens/foto__socrates.png";
 import marcelinhoImg from "../assets/imagens/foto__marcelinho.png";
 import titeImg from "../assets/imagens/foto__tite.png";
 import robertoImg from "../assets/imagens/foto__roberto.png";
+import useIsMobile from "./hooks/useIsMoblie";
 
 // ... seus outros imports
 const contatosLendarios = [
@@ -124,11 +124,12 @@ const Historia = () => {
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	};
 
+	const isMobile = useIsMobile();
+
 	return (
 		<div className="container__historia relative w-full" id="Historia">
 			<div className="">
 				<h1 className="container__title">História</h1>
-
 				<div className="container__texts__historia">
 					<section className="container__posts">
 						<span className="timeline__posts">
@@ -207,7 +208,10 @@ const Historia = () => {
 					<Quote />
 				</Button>
 			</span>
-			<Toaster position="top-right" className="toaster" />
+			<Toaster
+				position={isMobile ? "bottom-right" : "top-right"}
+				className="toaster"
+			/>
 		</div>
 	);
 };

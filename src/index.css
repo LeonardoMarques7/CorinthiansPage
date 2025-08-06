@@ -221,7 +221,6 @@ main {
 
 .info__times {
   margin: 1rem 0rem;
-  flex-direction: column;
 }
 
 .icon__competicao {
@@ -318,6 +317,7 @@ main {
 .accordion__historia {
   display: flex;
   justify-content: space-between;
+  font-family: BigNoodle;
   width: 100%;
   align-items: center;
   interpolate-size: allow-keywords;
@@ -439,6 +439,7 @@ main {
 .timeline__item {
   width: 50%;
   overflow-x: hidden;
+  font-family: RadioCanada;
   margin: 4svh 0;
   padding: 1rem 2rem;
   border: 1px solid #fff;
@@ -671,7 +672,7 @@ main {
 
 .card .card__header .card__image {
   max-height: 500px;
-  min-width: 300px;
+  min-width: auto;
   max-width: 25svw;
   object-fit: cover;
   border-radius: 10px;
@@ -872,7 +873,7 @@ main {
 
 /* Elenco */
 
-.container__eleco__title, .posicao__title {
+.container__elenco__title, .posicao__title {
     font-size: 100px;
     font-weight: 400;
     font-family: BigNoodle;
@@ -1062,16 +1063,17 @@ main {
 
 @media (max-width: 768px) {
   /* Header Moblie*/
-  nav {
-    padding: 0;
-  }
 
   .container__redes-sociais {
     display: none;
   }
 
+  .barra__navegacao {
+    padding: 0svw 4svw;
+  }
+
   .container__links {
-    justify-content: center;
+    justify-content: end;
     width: 100%;
   }
 
@@ -1082,11 +1084,10 @@ main {
   } */
 
    .logo__corinthians {
-    width: 60px;
+    width: 40px;
     left: 0;
-    position: relative;
-    padding: 0svw 2svw;
     top: 0;
+    position: relative;
     transform: translate(0%);
    }
 
@@ -1094,7 +1095,24 @@ main {
    main {
     padding: 0svh 4svw;
     margin-top: 2svh;
+    position: relative;
+      overflow: hidden;
    }
+
+     .main__image {
+      width: 100%;
+        /* ou um valor que não ultrapasse */
+        max-width: 60vw;
+        /* limita o máximo */
+        height: auto;
+        position: absolute;
+        top: 0;
+        /* sem deslocar pra cima */
+        right: 0;
+        filter: drop-shadow(0px 0px 25px #242424);
+        z-index: -1;
+        clip-path: inset(0);
+     }
 
    .main__texts {
     max-width: 50svw;
@@ -1107,7 +1125,7 @@ main {
 
    .main__image {
       width: 60svw;
-      top: 10svh;
+      top: -5svh;
       right: -10svw;
    }
 
@@ -1149,6 +1167,7 @@ main {
   .info__times {
     align-items: center;
     padding-top: 40px;
+    justify-content: center;
     height: 100%;
     display: flex;
     width: 100%;
@@ -1182,5 +1201,209 @@ main {
     justify-content: center;
     align-items: center;
   }
+
+  /* História */
+  .container__historia {
+    padding: 0svh 4svw;
+  }
+
+  .container__title {
+    font-size: 50px;
+  }
+  /* .card__image-wrapper img {
+    min-width: 10px !important;
+    width: 10px;
+    max-width: 10svw !important;
+  }
+
+  .image__postagem {
+    width: 30px;
+    height: 30px;
+  }
+
+    .timeline__item {
+      width: 80svw;
+    }
+
+    .card.post__left {
+      text-align: center;
+        right: 0;
+        min-width: 300px;
+        margin-left: 25svw;
+        margin-bottom: 0;
+    } */
+
+  .container__posts {
+    display: none;
+  }
+
+  .timeline__item {
+    width: 100%;
+    font-size: 16px;
+    font-family: RadioCanada;
+    font-weight: 300;
+  }
+
+  .accordion__historia {
+    font-family: BigNoodle;
+  }
+
+  .timeline {
+    width: 100%;
+  }
+
+  .historia__link {
+    font-size: 12px;
+    letter-spacing: normal;
+  }
+
+  /* Títulos */
+
+  .container__titulos__title {
+    font-size: 50px;
+    padding: 4svw;
+  }
+
+  .titulo__texts {
+      padding: 4svw;
+  }
+
+  .container__titulo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  .titulo__title {
+    font-size: 20px;
+  }
+
+  .titulo__years {
+    font-size: 20px;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+  }
+
+  .image__titulo, .image__titulo_2 {
+    width: 20svw;
+    height: 15svh;
+    object-fit: cover;
+  }
+
+  .container__image {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  /* Elenco */
+
+  .container__elenco {
+    padding: 0svh 4svw;
+  }
+
+  .container__elenco__title {
+    font-size: 50px;
+  }
+
+  .group__action {
+    font-size: 25px;
+  }
+
+  /* Notícias */
+
+  .container__noticias {
+    padding: 0svh 4svw;
+  }
+
+  .container__noticias__title {
+    font-size: 50px;
+  }
+
+  .card__noticia {
+    flex-direction: column;
+  }
+
+  .image__noticia {
+    height: 100%;
+    object-fit: cover;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px !important;
+    max-height: 400px;
+  }
+
+  .texts__noticia {
+    padding: 0svh 4svw;
+  }
+
+  .noticia__title {
+    font-size: 30px;
+    line-height: normal;
+  }
+
+  .noticia__paragraph {
+    max-width: 100%;
+    font-size: 18px;
+  }
+  .noticia__subtitle {
+    font-size: 20px;
+  }
   
+  .date {
+    font-size: 14px;
+  }
+
+  .actions__creditos {
+    padding-bottom: 2svh;
+  }
+
+  /* Footer */
+  .container__footer {
+    width: 100%;
+    position: relative;
+    max-height: 500px;
+    height: fit-content;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    overflow: visible;
+    /* deixa a imagem aparecer fora do container */
+  }
+
+  .footer__image {
+    width: 30svw;
+    left: -5svw;
+    position: absolute;
+    top: 0svh;
+    /* ajusta para sair mais ou menos */
+    filter: drop-shadow(0px 0px 25px #242424);
+    right: 0;
+    z-index: -1;
+  }
+
+  .footer__texts {
+    position: absolute;
+    display: flex;
+    text-align: flex-start;
+    gap: 0;
+    flex-direction: column;
+    top: 0;
+    left: 30svw;
+  }
+
+  .footer__title {
+    font-family: BigNoodle;
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  .footer__description {
+    max-width: 80%;
+    text-wrap: wrap;
+  }
 }

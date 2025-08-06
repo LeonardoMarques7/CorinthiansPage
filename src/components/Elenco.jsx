@@ -6,7 +6,7 @@ const Elenco = () => {
 		<section className="container__elenco" id="Elenco">
 			<div className="card__elenco">
 				<div className="elenco__header">
-					<h1 className="container__eleco__title">Elenco</h1>
+					<h1 className="container__elenco__title">Elenco</h1>
 					<div className="group__action">
 						<span className="action__masc">Masculino</span>
 						<span className="action__fem">Feminino</span>
