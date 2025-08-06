@@ -1143,7 +1143,7 @@ main {
       width: 100%;
       flex: 1;
       justify-content: center;
-      padding: 1rem .5rem;
+      padding: 0rem .5rem;
       border-radius: 10px;
       align-items: center;
       gap: 1rem;
