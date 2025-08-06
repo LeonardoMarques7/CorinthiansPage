@@ -170,12 +170,14 @@ main {
   font-size: 100px;
   font-family: BigNoodle;
   max-width: 500px;
+  line-height: normal;
 }
 
 .main__subtitle {
   font-family: BigNoodle;
   color: #B5B5B5;
   font-weight: 500;
+  font-size: 25px;
 }
 
 .main__image {
