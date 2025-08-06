@@ -220,7 +220,7 @@ main {
 }
 
 .info__times {
-  margin-top: 1rem;
+  margin: 1rem 0rem;
   flex-direction: column;
 }
 
@@ -236,17 +236,23 @@ main {
   margin: 0 auto;
   flex: 1;
   gap: .5rem;
-  background-color: #004d80;
+  background-color: #242424;
   color: #fff;
   border-radius: 7px;
   text-align: center;
-  font-size: 15px;
   padding: 0rem .5rem;
 }
 
 .icon__competicao img {
   width: 18px;
   object-fit: cover;
+}
+
+.separacao__div {
+  background-color: #202C33;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
 }
 
 .time-1 img,
@@ -257,13 +263,19 @@ main {
 
 .info__times,
 .time-1,
-.time-2, .main__partida {
+.time-2, .main__partida, .container__time {
   display: flex;
   align-items: center;
   gap: .5rem;
   padding-top: 0rem;
 
   font-size: 25px;
+}
+
+.main__partida {
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .data-local {
@@ -296,9 +308,8 @@ main {
 .footer__partida {
   flex-direction: column;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  justify-content: end;
+  align-items: end;
 }
 
 
@@ -1102,6 +1113,7 @@ main {
 
    .main__partidas {
     max-width: 100%;
+    gap: 1rem;
     width: 100%;
    }
 
@@ -1124,11 +1136,19 @@ main {
   }
 
   .icon__competicao {
-    background-color: #800000;
+    justify-content: center;
+    margin: 0 auto;
+    top: 0;
+    height: 40px;
+    left: 0;
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    background-color: #242424;
   }
   
   .info__times {
     align-items: center;
+    padding-top: 40px;
     height: 100%;
     display: flex;
     width: 100%;
@@ -1138,4 +1158,29 @@ main {
   .data-local {
     width: 100%;
   }
+
+  .container__time {
+    width: 100%;
+  }
+
+  .main__partida {
+    display: flex;
+    gap: .5rem;
+    padding: 0rem;
+    flex-direction: column;
+  }
+
+  .separacao__div {
+    width: 50%;
+    background-color: #ccc;
+    height: 1px;
+  }
+
+  .footer__partida {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
 }

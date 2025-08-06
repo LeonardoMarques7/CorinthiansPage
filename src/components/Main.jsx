@@ -21,24 +21,27 @@ const Main = () => {
 						<span className="icon__competicao">Copa do Brasil</span>
 						<div className="info__times">
 							<div className="main__partida">
-								<div className="time-1">
-									<p>COR</p>
-									<img
-										src={LogoCorinthiansPequena}
-										alt="Logo pequena do Corinthians"
-									/>
+								<div className="container__time">
+									<div className="time-1">
+										<p>COR</p>
+										<img
+											src={LogoCorinthiansPequena}
+											alt="Logo pequena do Corinthians"
+										/>
+									</div>
+									<span className="x-mark">X</span>
+									<div className="time-2">
+										<img src={LogoPalmeiras} alt="Logo pequena do Palmeiras" />
+										<p>PAL</p>
+									</div>
 								</div>
-								<span className="x-mark">X</span>
-								<div className="time-2">
-									<img src={LogoPalmeiras} alt="Logo pequena do Palmeiras" />
-									<p>PAL</p>
+								<span className="separacao__div"></span>
+								<div className="footer__partida">
+									<div className="data">
+										<span className="data">06/08/2025 21H30</span>
+									</div>
+									<span className="local">SP - São Paulo - Allianz Parque</span>
 								</div>
-							</div>
-							<div className="footer__partida">
-								<div className="data">
-									<span className="data">06/08/2025 21H30</span>
-								</div>
-								<span className="local">SP - São Paulo - Allianz Parque</span>
 							</div>
 						</div>
 					</div>
@@ -46,30 +49,32 @@ const Main = () => {
 						<span className="icon__competicao">Brasileirão</span>
 						<div className="info__times">
 							<div className="main__partida">
-								<div className="time-1">
-									<p>COR</p>
-									<img
-										src={LogoCorinthiansPequena}
-										alt="Logo pequena do Corinthians"
-									/>
+								<div className="container__time">
+									<div className="time-1">
+										<p>COR</p>
+										<img
+											src={LogoCorinthiansPequena}
+											alt="Logo pequena do Corinthians"
+										/>
+									</div>
+									<span className="x-mark">X</span>
+									<div className="time-2">
+										<img src={LogoJuventude} alt="Logo do Juventude" />
+										<p>JUT</p>
+									</div>
 								</div>
-								<span className="x-mark">X</span>
-								<div className="time-2">
-									<img src={LogoJuventude} alt="Logo do Juventude" />
-									<p>JUT</p>
+								<span className="separacao__div"></span>
+								<div className="footer__partida">
+									<div className="data">
+										<span className="data">11/08/2025 20h00</span>
+									</div>
+									<span className="local">
+										RS - Caxias do Sul - Alfredo Jaconi
+									</span>
 								</div>
-							</div>
-							<div className="footer__partida">
-								<div className="data">
-									<span className="data">11/08/2025 20h00</span>
-								</div>
-								<span className="local">
-									RS - Caxias do Sul - Alfredo Jaconi
-								</span>
 							</div>
 						</div>
 					</div>
-					{/*  */}
 					<p className="text__expandir">Ver todas as partidas</p>
 				</div>
 				<img
