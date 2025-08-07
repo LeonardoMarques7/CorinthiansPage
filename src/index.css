@@ -244,6 +244,7 @@ main {
   margin-top: 1rem;
   gap: 1rem;
   position: left;
+  cursor: pointer;
   width: auto;
 }
 
@@ -326,6 +327,11 @@ main {
   object-fit: cover;
 }
 
+.time-1 .time__null,
+.time-2 .time__null {
+  width: 45px;
+}
+
 .info__times,
 .time-1,
 .time-2, .main__partida, .container__time {
@@ -380,6 +386,27 @@ main {
 
 .container__time {
   width: 100%;
+}
+
+.badge__partida {
+  border-radius: 9px !important;
+  border: .5px solid #fff;
+}
+
+.partida__primary .badge__partida {
+  background-color: #fff;
+}
+
+.partida__primary .badge__partida .main__partida {
+  color: #242424;
+}
+
+.partida__primary .badge__partida .footer__partida .icon__competicao {
+  background-image: linear-gradient(to right, #242424, #2b2b2b, #424242);
+}
+
+.partida__primary .badge__partida .footer__partida .data {
+  color: #232323;
 }
 
 

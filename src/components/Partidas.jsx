@@ -6,56 +6,11 @@ import {
 	CarouselNext,
 	CarouselPrevious,
 } from "@/components/ui/carousel";
-
-import LogoCorinthiansPequena from "../assets/imagens/logo__pequena__normal.png";
-import LogoPalmeiras from "../assets/imagens/logo__palmeiras.png";
-import LogoJuventude from "../assets/imagens/logo__juventude.png";
+import Autoplay from "embla-carousel-autoplay";
 import { ArrowRight, ChevronRight } from "lucide-react";
+import timeNull from "../assets/imagens/times/timeNull.png";
 
-const partidasData = [
-	{
-		competicao: "Copa do Brasil",
-		time1: { sigla: "COR", logo: LogoCorinthiansPequena },
-		time2: { sigla: "PAL", logo: LogoPalmeiras },
-		dataHora: "06/08/2025 21H30",
-		local: "SP - São Paulo - Allianz Parque",
-	},
-	{
-		competicao: "Brasileirão",
-		time1: { sigla: "COR", logo: LogoCorinthiansPequena },
-		time2: { sigla: "JUT", logo: LogoJuventude },
-		dataHora: "11/08/2025 20h00",
-		local: "RS - Caxias do Sul - Alfredo Jaconi",
-	},
-	{
-		competicao: "Brasileirão",
-		time1: { sigla: "COR", logo: LogoCorinthiansPequena },
-		time2: { sigla: "JUT", logo: LogoJuventude },
-		dataHora: "11/08/2025 20h00",
-		local: "RS - Caxias do Sul - Alfredo Jaconi",
-	},
-	{
-		competicao: "Copa do Brasil",
-		time1: { sigla: "COR", logo: LogoCorinthiansPequena },
-		time2: { sigla: "PAL", logo: LogoPalmeiras },
-		dataHora: "06/08/2025 21H30",
-		local: "SP - São Paulo - Allianz Parque",
-	},
-	{
-		competicao: "Brasileirão",
-		time1: { sigla: "COR", logo: LogoCorinthiansPequena },
-		time2: { sigla: "JUT", logo: LogoJuventude },
-		dataHora: "11/08/2025 20h00",
-		local: "RS - Caxias do Sul - Alfredo Jaconi",
-	},
-	{
-		competicao: "Brasileirão",
-		time1: { sigla: "COR", logo: LogoCorinthiansPequena },
-		time2: { sigla: "JUT", logo: LogoJuventude },
-		dataHora: "11/08/2025 20h00",
-		local: "RS - Caxias do Sul - Alfredo Jaconi",
-	},
-];
+import partidasData from "../assets/partidasData";
 
 const Partidas = () => {
 	return (
@@ -68,12 +23,21 @@ const Partidas = () => {
 				</span>
 			</div>
 
-			<Carousel className="container__carroseul w-full mx-auto flex flex-col">
+			<Carousel
+				plugins={[
+					Autoplay({
+						delay: 8000,
+					}),
+				]}
+				className="container__carroseul w-full mx-auto flex flex-col"
+			>
 				<CarouselContent className="carroseul__content flex items-center gap-10">
 					{partidasData.map((partida, idx) => (
 						<CarouselItem
 							key={idx}
-							className="carroseul__item w-fit z-99 border-white border-[.5px] basis-full relative sm:basis-1/2"
+							className={`carroseul__item w-fit z-99 border-white border-[.5px] basis-full relative sm:basis-1/2 ${
+								idx % 2 === 0 ? "partida__primary" : "partida__secondary"
+							}`}
 						>
 							<div className="badge__partida">
 								<div className="info__times">
@@ -88,11 +52,24 @@ const Partidas = () => {
 											</div>
 											<span className="x-mark">X</span>
 											<div className="time-2">
-												<img
-													src={partida.time2.logo}
-													alt={`Logo ${partida.time2.sigla}`}
-												/>
-												<p>{partida.time2.sigla}</p>
+												{partida.time2.logo ? (
+													<>
+														<img
+															src={partida.time2.logo}
+															alt={`Logo ${partida.time2.sigla}`}
+														/>
+														<p>{partida.time2.sigla}</p>
+													</>
+												) : (
+													<>
+														<img
+															src={timeNull}
+															alt={"Time a Definir"}
+															className="time__null"
+														/>
+														<p>NULL</p>
+													</>
+												)}
 											</div>
 										</div>
 										<div className="footer__partida">
@@ -100,7 +77,11 @@ const Partidas = () => {
 												{partida.competicao}
 											</span>
 											<div className="data">
-												<span>{partida.dataHora}</span>
+												{partida.dataHora ? (
+													<span>{partida.dataHora}</span>
+												) : (
+													<span>Data e Hora a Definir</span>
+												)}
 											</div>
 											<span className="local">{partida.local}</span>
 										</div>
@@ -109,7 +90,6 @@ const Partidas = () => {
 							</div>
 						</CarouselItem>
 					))}
-					FIM
 				</CarouselContent>
 				<div className="container__actions__carroseul">
 					<CarouselPrevious className="carroseul__voltar" />
