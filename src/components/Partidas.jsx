@@ -58,19 +58,19 @@ const partidasData = [
 
 const Partidas = () => {
 	return (
-		<>
+		<div className="mx-auto w-full flex justify-center">
 			<Carousel
 				opts={{
-					align: "start",
+					align: "end",
 				}}
-				className="w-full max-w-screen-xl mx-auto"
+				className="container__carroseul w-full xl:max-w-screen-xl mx-auto"
 			>
 				{/* Garante que a rolagem funcione */}
-				<CarouselContent className="-ml-2">
+				<CarouselContent className="carroseul__content gap-10">
 					{partidasData.map((partida, idx) => (
 						<CarouselItem
 							key={idx}
-							className="pl-2 basis-full sm:basis-1/2 lg:basis-1/3"
+							className="carroseul__item w-fit z-99 border-white border-[.5px] basis-full relative sm:basis-1/2 lg:basis-1/3"
 						>
 							<div className="badge__partida">
 								<div className="info__times">
@@ -107,10 +107,8 @@ const Partidas = () => {
 						</CarouselItem>
 					))}
 				</CarouselContent>
-				<CarouselPrevious />
-				<CarouselNext />
 			</Carousel>
-		</>
+		</div>
 	);
 };
 

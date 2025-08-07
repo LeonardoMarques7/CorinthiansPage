@@ -177,6 +177,18 @@ main {
 
 /* Seus estilos CSS customizados */
 
+@media (width >= 80rem) {
+  .container__carroseul {
+    max-width: 80rem;
+  }
+}
+
+@media (width <= 90rem) {
+  .container__carroseul {
+    max-width: 64rem;
+  }
+}
+
 .main__partidas {
   margin-top: 1rem;
   border-radius: 10px;
@@ -187,12 +199,14 @@ main {
   font-family: bigNoodle;
 }
 
+.carroseul__item {
+  border-radius: 10px !important;
+}
+
 .badge__partida {
-  /* Mantenha as propriedades de estilo */
   position: relative;
   font-family: BigNoodle;
   color: #fff;
-  border-left: 1px solid #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
