@@ -69,7 +69,6 @@ const Partidas = () => {
 			</div>
 
 			<Carousel className="container__carroseul w-full mx-auto flex flex-col">
-				{/* Garante que a rolagem funcione */}
 				<CarouselContent className="carroseul__content flex items-center gap-10">
 					{partidasData.map((partida, idx) => (
 						<CarouselItem
