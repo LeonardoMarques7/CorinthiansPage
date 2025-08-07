@@ -201,10 +201,7 @@ const Historia = () => {
 				<Button className={`botao-topo`} onClick={subirAoTopo}>
 					<ChevronUpIcon size={20} />
 				</Button>
-				<Button
-					onClick={chamadaRonaldo}
-					className="button__trigger pointer-events-none"
-				>
+				<Button onClick={chamadaRonaldo} className="button__trigger">
 					<Quote />
 				</Button>
 			</span>
