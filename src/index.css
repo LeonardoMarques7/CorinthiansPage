@@ -1042,7 +1042,9 @@ main {
 
 .card__noticia img {
   z-index: 9;
+  background-color: #000000;
   object-fit: cover;
+  max-width: 450px;
   border-radius: 10px 0px 0px 10px;
 }
 
@@ -1097,39 +1099,54 @@ main {
 
 .container__footer {
   position: relative;
-  max-height: 500px;
+  max-height: 800px;
   height: fit-content;
+  align-items: center;
+  width: 100%;
+  gap: 2.5rem;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   overflow: visible;
   /* deixa a imagem aparecer fora do container */
 }
 
 .footer__image {
-  width: 30svw;
-  left: -5svw;
-  position: absolute;
-  top: -10svh;
-  /* ajusta para sair mais ou menos */
-  filter: drop-shadow(0px 0px 25px #242424);
-  right: 0;
-  z-index: -1;
-}
-
-.footer__texts{
-  position: absolute;
-  right: 2svw;
-  top: 20svh;
+  width: 400px;
 }
 
 .footer__title {
   font-family: BigNoodle;
   font-weight: 500;
+  text-align: center;
   font-size: 50px;
 }
 
 .footer__description {
-  max-width: 70%;
   text-wrap: wrap;
+}
+
+.footer__texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer__info {
+  font-size: 18px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+  padding: 5svh;
+  color: #242424;
+  background-color: #fff;
+}
+
+.footer__info p {
+  max-width: 70svw;
 }
 
 /* Moblie */
@@ -1410,47 +1427,63 @@ main {
 
   /* Footer */
   .container__footer {
-    width: 100%;
     position: relative;
-    max-height: 500px;
+    max-height: 800px;
     height: fit-content;
+    align-items: center;
+    width: 100%;
+    gap: 2.5rem;
     display: flex;
-    flex: 1;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     overflow: visible;
     /* deixa a imagem aparecer fora do container */
   }
 
   .footer__image {
-    width: 30svw;
-    left: -5svw;
-    position: absolute;
-    top: 0svh;
-    /* ajusta para sair mais ou menos */
-    filter: drop-shadow(0px 0px 25px #242424);
-    right: 0;
-    z-index: -1;
-  }
-
-  .footer__texts {
-    position: absolute;
-    display: flex;
-    text-align: flex-start;
-    gap: 0;
-    flex-direction: column;
-    top: 0;
-    left: 30svw;
+    width: 400px;
   }
 
   .footer__title {
     font-family: BigNoodle;
     font-weight: 500;
+    text-align: center;
     font-size: 30px;
   }
 
   .footer__description {
-    max-width: 80%;
     text-wrap: wrap;
+  }
+
+  .footer__texts {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer__info {
+    font-size: 16px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    padding: 5svh;
+    gap: 1rem;
+    color: #242424;
+    background-color: #fff;
+  }
+
+  .footer__info p {
+    max-width: 100svw;
+  }
+
+  .footer__info .container__redes-sociais {
+    display: flex;
   }
 
 }

@@ -42,9 +42,6 @@ function App() {
 			{/* Notícias */}
 			<Noticias />
 
-			{/* Divisória */}
-			<Separacao />
-
 			{/* Footer */}
 			<Footer />
 		</div>
