@@ -7,6 +7,7 @@ import Separacao from "./components/Separacao";
 import Elenco from "./components/Elenco";
 import Noticias from "./components/Noticias";
 import Footer from "./components/Footer";
+import Partidas from "./components/Partidas";
 
 function App() {
 	return (
@@ -16,6 +17,9 @@ function App() {
 
 			{/* Tela Principal */}
 			<Main />
+
+			{/* Partidas */}
+			<Partidas />
 
 			{/* História do Clube */}
 			<Historia />
