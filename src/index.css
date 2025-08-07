@@ -397,6 +397,10 @@ main {
   background-color: #fff;
 }
 
+.partida__secondary .badge__partida {
+    border: .5px solid #747474;
+}
+
 .partida__primary .badge__partida .main__partida {
   color: #242424;
 }
