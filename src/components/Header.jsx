@@ -40,11 +40,13 @@ const Header = () => {
 						</a>
 					</li>
 				</ul>
-				<img
-					src={EmblemaCorinthians}
-					className="logo__corinthians"
-					alt="Emblema do Corinthians"
-				/>
+				<a href="#" title="Início">
+					<img
+						src={EmblemaCorinthians}
+						className="logo__corinthians"
+						alt="Emblema do Corinthians"
+					/>
+				</a>
 				<ul className="container__links">
 					<li className="item__link">
 						<a href="#Historia">História</a>
