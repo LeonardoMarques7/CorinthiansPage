@@ -973,12 +973,14 @@ main {
   gap: 1.5rem;
   margin: 0 auto;
 }
+
 .item__jogador {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 .badge__jogador {
   font-family: BigNoodle;
   font-weight: 500;
@@ -1287,18 +1289,61 @@ main {
   }
 
   /* Elenco */
-
   .container__elenco {
     padding: 0svh 4svw;
   }
 
-  .container__elenco__title {
-    font-size: 50px;
+  .elenco__main {
+    gap: 1rem;
+  }
+
+  .elenco__header {
+    padding: 0px;
+  }
+
+  .container__elenco__title, .posicao__title  {
+    font-size: 30px;
   }
 
   .group__action {
-    font-size: 25px;
+    font-size: 20px;
   }
+
+  .list__jogadores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    max-width: calc(100px * 3);
+    justify-content: center;
+    gap: 3rem;
+    margin: 0 auto;
+  }
+
+  .item__jogador {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .badge__jogador {
+    font-family: BigNoodle;
+    font-weight: 500;
+    font-size: 15px;
+    border: 1px solid #fff;
+    width: 100%;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px -10px 0px 0px #ddd;
+  }
+
+  .container__posicao {
+    padding: 0px;
+  }
+
 
   /* Notícias */
 
