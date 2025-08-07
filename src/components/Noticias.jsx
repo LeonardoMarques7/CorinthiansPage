@@ -67,6 +67,67 @@ const Noticias = () => {
 						</div>
 					</div>
 				</div>
+				<div className="container__other">
+					<h3 className="container__noticias__title">Outras Notícias</h3>
+					<div className="container__noticias">
+						<div className="card__noticia">
+							<div className="image__other">
+								<img
+									src={noticia2}
+									className="card__image"
+									alt="Imagem da Notícia"
+								/>
+								<div className="other__creditos">
+									Foto: Rodrigo Coca/Agência Corinthians
+								</div>
+							</div>
+							<div className="cotainer__texts">
+								<div className="card__noticia__header">
+									<p className="text__assunto">Resultado</p>
+									<span className="card__separcao__header"></span>
+									<p className="date">23/07/2025</p>
+								</div>
+								<div className="card__noticia__main">
+									<h3 className="title__noticia">
+										Corinthians elimina o rival e avança na Copa do Brasil
+									</h3>
+									<h6 className="subtitle__noticia">
+										Corinthians faz 2 a 0 no Allianz Parque e avança na
+										competição nacional
+									</h6>
+								</div>
+							</div>
+						</div>
+						<div className="card__noticia">
+							<div className="image__other">
+								<img
+									src={noticia2}
+									className="card__image"
+									alt="Imagem da Notícia"
+								/>
+								<div className="other__creditos">
+									Foto: Rodrigo Coca/Agência Corinthians
+								</div>
+							</div>
+							<div className="cotainer__texts">
+								<div className="card__noticia__header">
+									<p className="text__assunto">Resultado</p>
+									<span className="card__separcao__header"></span>
+									<p className="date">23/07/2025</p>
+								</div>
+								<div className="card__noticia__main">
+									<h3 className="title__noticia">
+										Corinthians elimina o rival e avança na Copa do Brasil
+									</h3>
+									<h6 className="subtitle__noticia">
+										Corinthians faz 2 a 0 no Allianz Parque e avança na
+										competição nacional
+									</h6>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</section>
 		</div>
 	);
