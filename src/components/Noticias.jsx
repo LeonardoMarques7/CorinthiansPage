@@ -22,8 +22,8 @@ const Noticias = () => {
 							</h2>
 							<span className="noticia__subtitle">
 								Novo acordo entre clube e atleta é válido até o meio de 2030
-								<p className="date">24/07/2025 19h54 Assessoria de imprensa</p>
 							</span>
+							<p className="date">24/07/2025 19h54 Assessoria de imprensa</p>
 							<p className="noticia__paragraph">
 								Nesta quinta-feira (24), o Corinthians acertou a renovação de
 								contrato do atacante Yuri Alberto. Após a condução das
@@ -31,6 +31,7 @@ const Noticias = () => {
 								de futebol Fabinho Soldado, o vínculo – antes válido até o fim
 								de 2027 – será agora até julho de 2030.
 							</p>
+							<hr />
 							<div className="actions__creditos">
 								Foto: Rodrigo Coca/Agência Corinthians
 							</div>
@@ -51,10 +52,8 @@ const Noticias = () => {
 								<span className="noticia__subtitle">
 									Elenco terá mais um treino nesta sexta (25) antes da viagem ao
 									Rio de Janeiro
-									<p className="date">
-										24/07/2025 15h06 Assessoria de imprensa
-									</p>
 								</span>
+								<p className="date">24/07/2025 15h06 Assessoria de imprensa</p>
 								<p className="noticia__paragraph">
 									Na manhã desta quinta-feira (24), no CT Dr. Joaquim Grava, o
 									Corinthians se reapresentou após o empate sem gols diante do
@@ -65,6 +64,7 @@ const Noticias = () => {
 									visitará o Botafogo.
 								</p>
 							</div>
+							<hr />
 							<div className="actions__creditos">
 								Foto: Rodrigo Coca/Agência Corinthians
 							</div>

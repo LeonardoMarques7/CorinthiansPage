@@ -128,74 +128,70 @@ const Historia = () => {
 
 	return (
 		<div className="container__historia relative w-full" id="Historia">
-			<div className="">
-				<h1 className="container__title">História</h1>
-				<div className="container__texts__historia">
-					<section className="container__posts">
-						<span className="timeline__posts">
-							{postagensData.map((item, index) => (
-								<div
-									className={`card ${
-										index % 2 === 0 ? "post__left" : "post__right"
-									}`}
-									key={index}
-								>
-									<div className="card__header">
-										<img src={emblema} className="image__postagem" alt="" />
-										<div className="card__image-wrapper">
-											<img
-												src={item.image}
-												alt="Postagem 1"
-												className="card__image"
-											/>
-										</div>
-									</div>
-								</div>
-							))}
-						</span>
-					</section>
-					<div className="timeline">
-						{timelineData.map((item, index) => (
+			<h1 className="container__title">História</h1>
+			<div className="container__texts__historia">
+				<section className="container__posts">
+					<span className="timeline__posts">
+						{postagensData.map((item, index) => (
 							<div
-								key={index}
-								className={`timeline__item ${
-									index % 2 === 0 ? "left" : "right"
+								className={`card ${
+									index % 2 === 0 ? "post__left" : "post__right"
 								}`}
+								key={index}
 							>
-								<div className="content">
-									<Accordion
-										collapsible
-										defaultValue={index % 2 === 0 ? "item-1" : undefined}
-									>
-										<AccordionItem value="item-1">
-											<AccordionTrigger className="accordion__historia">
-												{item.year} {item.title}
-											</AccordionTrigger>
-											<AccordionContent className="accordion__content">
-												{item.text}
-											</AccordionContent>
-										</AccordionItem>
-									</Accordion>
+								<div className="card__header">
+									<img src={emblema} className="image__postagem" alt="" />
+									<div className="card__image-wrapper">
+										<img
+											src={item.image}
+											alt="Postagem 1"
+											className="card__image"
+										/>
+									</div>
 								</div>
 							</div>
 						))}
-					</div>
-				</div>
-
-				<div className="footer__texts__historia">
-					<hr />
-					<span className="historia__subtitle">
-						Fonte: Site Oficial do Corinthians
-						<a
-							href="https://www.corinthians.com.br/clube/historia"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="historia__link"
-						>
-							https://www.corinthians.com.br/clube/historia
-						</a>
 					</span>
+				</section>
+				<div className="timeline">
+					{timelineData.map((item, index) => (
+						<div
+							key={index}
+							className={`timeline__item ${index % 2 === 0 ? "left" : "right"}`}
+						>
+							<div className="content">
+								<Accordion
+									collapsible
+									defaultValue={index % 2 === 0 ? "item-1" : undefined}
+								>
+									<AccordionItem value="item-1">
+										<AccordionTrigger className="accordion__historia">
+											{item.year} {item.title}
+										</AccordionTrigger>
+										<AccordionContent className="accordion__content">
+											{item.text}
+										</AccordionContent>
+									</AccordionItem>
+								</Accordion>
+							</div>
+						</div>
+					))}
 				</div>
+			</div>
+
+			<div className="footer__texts__historia">
+				<hr />
+				<span className="historia__subtitle">
+					Fonte: Site Oficial do Corinthians
+					<a
+						href="https://www.corinthians.com.br/clube/historia"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="historia__link"
+					>
+						https://www.corinthians.com.br/clube/historia
+					</a>
+				</span>
 			</div>
 			<span className="container__actions">
 				<Button className={`botao-topo`} onClick={subirAoTopo}>
