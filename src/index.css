@@ -170,6 +170,32 @@ main {
 
 /* Partidas */
 
+.section__partidas {
+  padding: 0svh 2svw;
+}
+
+.section__partidas .container__title {
+  margin-bottom: 0;
+  padding-bottom: 0;
+} 
+
+.section__partidas .container__subtitle {
+  color: #B5B5B5;
+  font-family: RadioCanada;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 2svh 0svw;
+  cursor: none;
+}
+
+.header__texts__partidas {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: start;
+  position: relative;
+}
+
 .text__expandir {
   padding: 2svw;
   cursor: pointer;
@@ -177,16 +203,33 @@ main {
 
 /* Seus estilos CSS customizados */
 
-@media (width >= 80rem) {
-  .container__carroseul {
-    max-width: 80rem;
+@media (width >=80rem) {
+  .carroseul__item {
+    flex-basis: calc(1/5 * 100%)
   }
 }
 
-@media (width <= 90rem) {
-  .container__carroseul {
-    max-width: 64rem;
+@media (width <=90rem) {
+  .carroseul__item {
+    flex-basis: calc(1/4 * 100%)
   }
+}
+
+.container__actions__carroseul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  margin-top: 1rem;
+  gap: 1rem;
+  position: left;
+  width: auto;
+}
+
+.carroseul__proximo, .carroseul__voltar {
+  position: relative !important;
+  padding: 20px;
+  margin: 0;
 }
 
 .main__partidas {

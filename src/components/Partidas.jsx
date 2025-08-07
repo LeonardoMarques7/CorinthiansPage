@@ -10,6 +10,7 @@ import {
 import LogoCorinthiansPequena from "../assets/imagens/logo__pequena__normal.png";
 import LogoPalmeiras from "../assets/imagens/logo__palmeiras.png";
 import LogoJuventude from "../assets/imagens/logo__juventude.png";
+import { ArrowRight, ChevronRight } from "lucide-react";
 
 const partidasData = [
 	{
@@ -58,19 +59,22 @@ const partidasData = [
 
 const Partidas = () => {
 	return (
-		<div className="mx-auto w-full flex justify-center">
-			<Carousel
-				opts={{
-					align: "end",
-				}}
-				className="container__carroseul w-full xl:max-w-screen-xl mx-auto"
-			>
+		<section className="section__partidas mx-auto w-full">
+			<div className="header__texts__partidas">
+				<h1 className="container__title">Partidas </h1>
+				<span className="container__subtitle flex items-center gap-4">
+					Arraste para o lado para ver mais partias
+					<ArrowRight />
+				</span>
+			</div>
+
+			<Carousel className="container__carroseul w-full mx-auto flex flex-col">
 				{/* Garante que a rolagem funcione */}
-				<CarouselContent className="carroseul__content gap-10">
+				<CarouselContent className="carroseul__content flex items-center gap-10">
 					{partidasData.map((partida, idx) => (
 						<CarouselItem
 							key={idx}
-							className="carroseul__item w-fit z-99 border-white border-[.5px] basis-full relative sm:basis-1/2 lg:basis-1/3"
+							className="carroseul__item w-fit z-99 border-white border-[.5px] basis-full relative sm:basis-1/2"
 						>
 							<div className="badge__partida">
 								<div className="info__times">
@@ -106,9 +110,14 @@ const Partidas = () => {
 							</div>
 						</CarouselItem>
 					))}
+					FIM
 				</CarouselContent>
+				<div className="container__actions__carroseul">
+					<CarouselPrevious className="carroseul__voltar" />
+					<CarouselNext className="carroseul__proximo" />
+				</div>
 			</Carousel>
-		</div>
+		</section>
 	);
 };
 
