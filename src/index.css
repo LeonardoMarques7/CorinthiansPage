@@ -1103,7 +1103,7 @@ main {
   display: flex;
   gap: 1rem;
   align-items: center;
-  border-bottom: 1px solid #747474;
+  border-bottom: 1px solid #4b4b4b;
   padding-bottom: 1rem;
   color: #afafaf;
 }
@@ -1186,13 +1186,12 @@ main {
 
 .other__creditos {
   position: absolute;
-  border: 2px solid #242424e3;
-  bottom: -2.5rem;
+  bottom: .5rem;
   padding: 5px;
-  background-color: #4b4b4b;
+  background-color: hsl(0, 0%, 14%);
   border-radius: 10px;
   text-align: center;
-  width: 80%;
+  width: 90%;
   font-size: 12px;
   left: 50%;
   transform: translateX(-50%);
@@ -1200,9 +1199,19 @@ main {
 }
 
 .card__image {
-  width: 40svw;
-  height: 40svh;
+  min-width: 25svw;
+  max-height: 40svh;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  border: 0px;
+  filter: grayscale(10%);
+  transition: .5s ease-in-out;
+  border-radius: 7px;
+}
+
+.card__image:hover {
+  filter: grayscale(0%);
 }
 
 .card__noticia__header {

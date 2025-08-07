@@ -2,6 +2,7 @@ import { Heart, MessageCircle } from "lucide-react";
 import React from "react";
 import noticia1 from "../assets/imagens/noticias/noticia1.png";
 import noticia2 from "../assets/imagens/noticias/noticia2.png";
+import noticia3 from "../assets/imagens/noticias/noticia3.png";
 import heart from "../assets/imagens/noticias/heart.png";
 
 const Noticias = () => {
@@ -85,7 +86,7 @@ const Noticias = () => {
 								<div className="card__noticia__header">
 									<p className="text__assunto">Resultado</p>
 									<span className="card__separcao__header"></span>
-									<p className="date">23/07/2025</p>
+									<p className="date">06/08/2025</p>
 								</div>
 								<div className="card__noticia__main">
 									<h3 className="title__noticia">
@@ -101,7 +102,7 @@ const Noticias = () => {
 						<div className="card__noticia">
 							<div className="image__other">
 								<img
-									src={noticia2}
+									src={noticia3}
 									className="card__image"
 									alt="Imagem da Notícia"
 								/>
@@ -113,15 +114,16 @@ const Noticias = () => {
 								<div className="card__noticia__header">
 									<p className="text__assunto">Resultado</p>
 									<span className="card__separcao__header"></span>
-									<p className="date">23/07/2025</p>
+									<p className="date">06/08/2025</p>
 								</div>
 								<div className="card__noticia__main">
 									<h3 className="title__noticia">
-										Corinthians elimina o rival e avança na Copa do Brasil
+										Nos pênaltis, Brabas eliminam o Cruzeiro e avançam na Copa
+										do Brasil
 									</h3>
 									<h6 className="subtitle__noticia">
-										Corinthians faz 2 a 0 no Allianz Parque e avança na
-										competição nacional
+										Corinthians domina, empata em 1 a 1 no tempo normal e conta
+										com a estrela de Nicole para vencer nas penalidades
 									</h6>
 								</div>
 							</div>
