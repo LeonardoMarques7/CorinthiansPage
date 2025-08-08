@@ -3,6 +3,8 @@ import React from "react";
 import noticia1 from "../assets/imagens/noticias/noticia1.png";
 import noticia2 from "../assets/imagens/noticias/noticia2.png";
 import noticia3 from "../assets/imagens/noticias/noticia3.png";
+import noticia4 from "../assets/imagens/noticias/noticia4.jpg";
+import noticia5 from "../assets/imagens/noticias/noticia5.png";
 import heart from "../assets/imagens/noticias/heart.png";
 
 const Noticias = () => {
@@ -122,8 +124,64 @@ const Noticias = () => {
 										do Brasil
 									</h3>
 									<h6 className="subtitle__noticia">
-										Corinthians domina, empata em 1 a 1 no tempo normal e conta
-										com a estrela de Nicole para vencer nas penalidades
+										Corinthians domina, empata em 1 a 1 no tempo normal
+									</h6>
+								</div>
+							</div>
+						</div>
+						<div className="card__noticia">
+							<div className="image__other">
+								<img
+									src={noticia4}
+									className="card__image"
+									alt="Imagem da Notícia"
+								/>
+								<div className="other__creditos">
+									Foto: Raphael Martinez/Agência Corinthians
+								</div>
+							</div>
+							<div className="cotainer__texts">
+								<div className="card__noticia__header">
+									<p className="text__assunto">Renovação</p>
+									<span className="card__separcao__header"></span>
+									<p className="date">06/08/2025</p>
+								</div>
+								<div className="card__noticia__main">
+									<h3 className="title__noticia">
+										Corinthians renova contrato com Matheus Bidu até 2027
+									</h3>
+									<h6 className="subtitle__noticia">
+										Lateral-esquerdo, que se aproxima dos 100 jogos, celebra
+										novo vínculo com o Timão
+									</h6>
+								</div>
+							</div>
+						</div>
+						<div className="card__noticia">
+							<div className="image__other">
+								<img
+									src={noticia5}
+									className="card__image"
+									alt="Imagem da Notícia"
+								/>
+								<div className="other__creditos">
+									Foto: Raphael Martinez/Agência Corinthians
+								</div>
+							</div>
+							<div className="cotainer__texts">
+								<div className="card__noticia__header">
+									<p className="text__assunto">Resultado</p>
+									<span className="card__separcao__header"></span>
+									<p className="date">06/08/2025</p>
+								</div>
+								<div className="card__noticia__main">
+									<h3 className="title__noticia">
+										Corinthians empata com o Fortaleza e busca reação no
+										Brasileirão
+									</h3>
+									<h6 className="subtitle__noticia">
+										Timão sai atrás do placar na Neo Química Arena, mas André
+										Carrillo garante o empate no fim
 									</h6>
 								</div>
 							</div>
