@@ -33,7 +33,9 @@ const Noticias = () => {
 									</div>
 								</div>
 								<div className="main__noticia">
-									<h2 className="noticia__title">{item.title}</h2>
+									<h2 className="noticia__title max-sm:!text-3xl">
+										{item.title}
+									</h2>
 									<span className="noticia__subtitle">{item.subtitle}</span>
 									<div className="noticia__container__texts leading-relaxed">
 										{item.conteudo}
