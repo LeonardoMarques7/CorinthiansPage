@@ -986,10 +986,12 @@ main {
   font-size: 50px;
   display: flex;
   gap: 1rem;
+  color: #B5B5B5;
 }
 
-.group__action .action__fem{
-  color: #B5B5B5;
+.group__action .action__fem.active, .group__action .action__masc.active {
+  color: #fff;
+  cursor: pointer;
 }
 
 .container__posicao {

@@ -20,22 +20,31 @@ const Header = () => {
 			<nav className="barra__navegacao">
 				<ul className="container__redes-sociais">
 					<li className="brand__rede">
-						<a href="#" className="link__rede">
+						<a
+							href="https://www.instagram.com/corinthians/"
+							className="link__rede"
+						>
 							<img src={LogoInsta} alt="Logo da Rede Social" />
 						</a>
 					</li>
 					<li className="brand__rede">
-						<a href="#" className="link__rede">
+						<a
+							href="https://www.youtube.com/@corinthians/videos"
+							className="link__rede"
+						>
 							<img src={LogoYouTube} alt="Logo da Rede Social" />
 						</a>
 					</li>
 					<li className="brand__rede">
-						<a href="#" className="link__rede">
+						<a
+							href="https://www.tiktok.com/@corinthians"
+							className="link__rede"
+						>
 							<img src={LogoTikTok} alt="Logo da Rede Social" />
 						</a>
 					</li>
 					<li className="brand__rede">
-						<a href="#" className="link__rede">
+						<a href="https://x.com/Corinthians" className="link__rede">
 							<img src={LogoX} alt="Logo da Rede Social" />
 						</a>
 					</li>
