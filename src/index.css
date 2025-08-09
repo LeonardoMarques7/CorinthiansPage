@@ -175,13 +175,13 @@ main {
 }
 
 .container__carroseul:hover{
-  cursor: grab !important;
+  cursor: grab;
 }
 
 .container__carroseul::after,
 .container__carroseul::before,
 .container__carroseul:active {
-  cursor: grabbing !important;
+  cursor: grabbing;
 }
 
 .section__partidas .container__title {
@@ -255,6 +255,7 @@ main {
 .carroseul__proximo, .carroseul__voltar {
   position: relative !important;
   padding: 20px;
+  cursor: pointer;
   margin: 0;
 }
 
@@ -975,7 +976,6 @@ main {
   align-items: center;
 
 }
-
 .posicao__title {
   padding-left: 2svw;
 }
@@ -993,9 +993,21 @@ main {
   color: #B5B5B5;
 }
 
+.action__fem, .action__masc {
+  border-bottom: 1px solid #242424;
+}
+
 .group__action .action__fem.active, .group__action .action__masc.active {
   color: #fff;
+  border-bottom: 1px solid #fff;
   cursor: pointer;
+}
+
+.group__action .action__fem:hover, .group__action .action__masc:hover {
+  color: #fff;
+  border-bottom-color: 1px solid #fff;
+  cursor: pointer;
+  transition: .5s ease-in-out;
 }
 
 .list__jogadores {
@@ -1338,6 +1350,12 @@ main {
   max-width: 70svw;
 }
 
+@media (width >= 90rem) {
+  .item__jogador {
+    flex-basis: calc(1/5 * 100%)
+  }
+}
+
 /* Moblie */
 @media (max-width: 768px) {
   /* Header Moblie*/
@@ -1530,22 +1548,6 @@ main {
     font-size: 20px;
   }
 
-  .list__jogadores {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    max-width: calc(100px * 3);
-    justify-content: center;
-    gap: 3rem;
-    margin: 0 auto;
-  }
-
-  .item__jogador {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
   .badge__jogador {
     font-family: BigNoodle;
     font-weight: 500;
@@ -1565,6 +1567,10 @@ main {
     padding: 0px;
   }
 
+  .carroseul__jogadores {
+    gap: 1rem;
+    width: 100%;
+  }
 
   /* Notícias */
 

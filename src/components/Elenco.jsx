@@ -49,7 +49,14 @@ const Elenco = () => {
 					{Array.isArray(elencoExibido) &&
 						elencoExibido.map((grupo, index) => (
 							<section key={index} className="container__posicao">
-								<Carousel className="container__carroseul w-full flex flex-col">
+								<Carousel
+									plugins={[
+										Autoplay({
+											delay: 2000,
+										}),
+									]}
+									className=" w-full flex flex-col"
+								>
 									<div className="carroseul__header__posicao flex items-center">
 										<div className="carroseul__actions__elenco">
 											<CarouselPrevious className="carroseul__voltar" />
@@ -61,7 +68,7 @@ const Elenco = () => {
 										{grupo.jogadores.map((jogador, idx) => (
 											<CarouselItem
 												key={idx}
-												className={`item__jogador w-fit z-99 relative basis-1/4 ${
+												className={`item__jogador w-fit z-99 relative basis-full md:basis-1/4 sm:basis-1/2 ${
 													idx % 2 === 0
 														? "partida__primary"
 														: "partida__secondary"
