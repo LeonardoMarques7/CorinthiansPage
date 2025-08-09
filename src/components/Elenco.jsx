@@ -55,7 +55,7 @@ const Elenco = () => {
 											delay: 5000,
 										}),
 									]}
-									className=" w-full flex flex-col"
+									className="container__carroseul w-full flex flex-col"
 								>
 									<div className="carroseul__header__posicao flex items-center">
 										<div className="carroseul__actions__elenco">

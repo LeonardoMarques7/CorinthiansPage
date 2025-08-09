@@ -1550,27 +1550,55 @@ main {
     gap: 1rem;
   }
 
+  .carroseul__header__posicao {
+    display: flex;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: space-between;
+    flex: 1;
+    align-items: center;
+  }
+
   .elenco__header {
     padding: 0px;
   }
 
   .container__elenco__title, .posicao__title  {
     font-size: 30px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .carroseul__actions__elenco {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    align-items: center;
+    justify-content: end;
+    right: 0;
+    margin-right: 0;
   }
 
   .group__action {
     font-size: 20px;
   }
 
+  .carroseul__proximo,
+  .carroseul__voltar {
+    padding: 10px;
+    cursor: pointer;
+    margin: 0;
+  }
+
   .badge__jogador {
     font-family: BigNoodle;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 25px;
     border: 1px solid #fff;
+    max-width: 70svw;
     width: 100%;
     border-radius: 5px;
-    width: 100px;
-    height: 50px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
