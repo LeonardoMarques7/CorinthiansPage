@@ -960,10 +960,6 @@ main {
 
 /* Elenco */
 
-.container__posicao {
-  margin: 2svw;
-}
-
 .container__elenco__title, .posicao__title {
     font-size: 100px;
     font-weight: 400;
@@ -978,6 +974,10 @@ main {
   display: flex;
   align-items: center;
 
+}
+
+.posicao__title {
+  padding-left: 2svw;
 }
 
 .elenco__main {
@@ -999,15 +999,31 @@ main {
 }
 
 .list__jogadores {
-  display: grid;
+  display: flex;
+  width: 100%;
+  background: #000;
+  gap: 1rem;
+}
+
+.carroseul__jogadores {
+  width: 100%;
+}
+
+.carroseul__actions__elenco {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
   align-items: center;
-  padding: 2svw;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  justify-content: end;
+  right: 2svw;
+  margin-right: 2svw;
+  gap: 1rem;
+  cursor: pointer;
+  width: auto;
 }
 
 .item__jogador {
   display: flex;
-  max-width: 150px;
   margin: 0;
   flex-direction: column;
   justify-content: center;
@@ -1019,14 +1035,17 @@ main {
   font-weight: 500;
   font-size: 30px;
   border: 1px solid #fff;
-  width: 100%;
+  width: fit-content;
+  width: 250px;
   border-radius: 5px;
-  width: 200px;
-  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0px -10px 0px 0px #ddd;
+}
+
+.item__jogador img {
+  width: 250px;
 }
 
 /* Notícias */

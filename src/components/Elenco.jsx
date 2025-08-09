@@ -1,5 +1,14 @@
 import React, { useState } from "react";
 import elencoCompleto from "../assets/elencoCompleto";
+import {
+	Carousel,
+	CarouselContent,
+	CarouselItem,
+	CarouselNext,
+	CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { ArrowRight, ChevronRight } from "lucide-react";
 
 const Elenco = () => {
 	const [elencoExibido, setElencoExibido] = useState(
@@ -40,15 +49,30 @@ const Elenco = () => {
 					{Array.isArray(elencoExibido) &&
 						elencoExibido.map((grupo, index) => (
 							<section key={index} className="container__posicao">
-								<h2 className="posicao__title">{grupo.posicao}</h2>
-								<div className="list__jogadores">
-									{grupo.jogadores.map((jogador, idx) => (
-										<div key={idx} className="item__jogador">
-											<img src={jogador.foto} alt={jogador.nome} />
-											<div className="badge__jogador">{jogador.nome}</div>
+								<Carousel className="container__carroseul w-full flex flex-col">
+									<div className="carroseul__header__posicao flex items-center">
+										<div className="carroseul__actions__elenco">
+											<CarouselPrevious className="carroseul__voltar" />
+											<CarouselNext className="carroseul__proximo" />
 										</div>
-									))}
-								</div>
+										<h2 className="posicao__title">{grupo.posicao}</h2>
+									</div>
+									<CarouselContent className="carroseul__jogadores">
+										{grupo.jogadores.map((jogador, idx) => (
+											<CarouselItem
+												key={idx}
+												className={`item__jogador w-fit z-99 relative basis-1/4 ${
+													idx % 2 === 0
+														? "partida__primary"
+														: "partida__secondary"
+												}`}
+											>
+												<img src={jogador.foto} alt={jogador.nome} />
+												<div className="badge__jogador">{jogador.nome}</div>
+											</CarouselItem>
+										))}
+									</CarouselContent>
+								</Carousel>
 							</section>
 						))}
 				</div>
