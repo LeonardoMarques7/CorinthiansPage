@@ -8,7 +8,7 @@ import Elenco from "./components/Elenco";
 import Noticias from "./components/Noticias";
 import Footer from "./components/Footer";
 import Partidas from "./components/Partidas";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Toaster, toast } from "sonner";
 import { Button } from "@/components/ui/button"; // botão do shadcn
 import { ArrowBigUp, Bell, ChevronUpIcon, Quote } from "lucide-react";
@@ -65,14 +65,20 @@ const contatosLendarios = [
 ];
 
 function App() {
+	const [mostrarBotao, setMostrarBotao] = useState(false);
+	const mainRef = useRef(null);
 	useEffect(() => {
 		const aoRolar = () => {
-			if (window.scrollY > 400) {
-				setMostrarBotao(true);
-			} else {
-				setMostrarBotao(false);
+			if (mainRef.current) {
+				const alturaMain = mainRef.current.offsetHeight;
+				if (window.scrollY > alturaMain) {
+					setMostrarBotao(true);
+				} else {
+					setMostrarBotao(false);
+				}
 			}
 		};
+
 		window.addEventListener("scroll", aoRolar);
 		return () => window.removeEventListener("scroll", aoRolar);
 	}, []);
@@ -110,8 +116,9 @@ function App() {
 			{/* Barra de Navegação */}
 			<Header />
 
-			{/* Tela Principal */}
 			<Main />
+			{/* Tela Principal */}
+
 			<Toaster
 				position={isMobile ? "bottom-right" : "top-right"}
 				className="toaster"
@@ -120,7 +127,9 @@ function App() {
 			{/* Botão fixo */}
 
 			{/* Partidas */}
-			<Partidas />
+			<div ref={mainRef}>
+				<Partidas />
+			</div>
 
 			{/* História do Clube */}
 			<Historia />
@@ -145,8 +154,15 @@ function App() {
 
 			{/* Footer */}
 			<Footer />
-			<span className="container__actions">
-				<Button className={`botao-topo`} onClick={subirAoTopo}>
+			<span
+				className={`container__actions  transition-all duration-500 ease-in-out sticky top-2 flex gap-2
+	${
+		mostrarBotao
+			? "opacity-100 translate-y-0"
+			: "opacity-0 translate-y-5 pointer-events-none"
+	}`}
+			>
+				<Button className="botao-topo" onClick={subirAoTopo}>
 					<ChevronUpIcon size={20} />
 				</Button>
 				<Button onClick={chamadaRonaldo} className="button__trigger">

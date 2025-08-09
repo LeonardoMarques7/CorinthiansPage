@@ -179,6 +179,20 @@ main {
   padding: 0svh 2svw;
 }
 
+.section__partidas .container__actions__carroseul {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: end;
+  margin-top: 1rem;
+  gap: 1rem;
+  position: left;
+  cursor: pointer;
+  width: auto;
+}
+
+
 .container__carroseul:hover{
   cursor: grab;
 }
@@ -238,6 +252,10 @@ main {
   .section__partidas {
     padding: 0svh 4svw;
   }
+}
+
+.container__actions__carroseul {
+  top: 1rem;
 }
 
 .container__actions__carroseul:hover {
@@ -628,6 +646,7 @@ main {
   display: flex;
   gap: .5rem;
   text-align: center;
+  transition: .5s ease-in-out;
   width: fit-content;
   bottom: 2svh;
 }

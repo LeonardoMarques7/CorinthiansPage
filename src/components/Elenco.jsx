@@ -52,7 +52,7 @@ const Elenco = () => {
 								<Carousel
 									plugins={[
 										Autoplay({
-											delay: 2000,
+											delay: 5000,
 										}),
 									]}
 									className=" w-full flex flex-col"

@@ -29,7 +29,7 @@ const Partidas = () => {
 						delay: 7000,
 					}),
 				]}
-				className="container__carroseul w-full mx-auto flex flex-col"
+				className="container__carroseul w-full mx-auto h-full flex flex-col"
 			>
 				<CarouselContent className="carroseul__content flex items-center gap-10">
 					{partidasData.map((partida, idx) => (
