@@ -8,7 +8,7 @@ import {
 	CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowRight, Badge, ChevronRight } from "lucide-react";
 
 const Elenco = () => {
 	const [elencoExibido, setElencoExibido] = useState(
@@ -68,14 +68,17 @@ const Elenco = () => {
 										{grupo.jogadores.map((jogador, idx) => (
 											<CarouselItem
 												key={idx}
-												className={`item__jogador w-fit z-99 relative basis-full md:basis-1/4 sm:basis-1/2 ${
+												className={`item__jogador w-fit z-99 relative basis-[80svw] md:basis-1/4 sm:basis-1/2 ${
 													idx % 2 === 0
-														? "partida__primary"
-														: "partida__secondary"
+														? "polaroid__primary rotate-2"
+														: "polaroid__secondary rotate-[-2deg]"
 												}`}
 											>
 												<img src={jogador.foto} alt={jogador.nome} />
-												<div className="badge__jogador">{jogador.nome}</div>
+												<span className="badge__numero">#{jogador.numero}</span>
+												<div className="footer__polaroid">
+													<div className="">{jogador.nome}</div>
+												</div>
 											</CarouselItem>
 										))}
 									</CarouselContent>

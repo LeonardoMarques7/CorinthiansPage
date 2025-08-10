@@ -70,14 +70,17 @@ const elencoCompleto = [
 					{
 						nome: "Felipe Longo",
 						foto: goleiro1,
+						numero: 40,
 					},
 					{
 						nome: "Hugo Souza",
 						foto: goleiro2,
+						numero: 1,
 					},
 					{
 						nome: "Matheus Donelli",
 						foto: goleiro3,
+						numero: 32,
 					},
 				],
 			},
@@ -87,22 +90,27 @@ const elencoCompleto = [
 					{
 						nome: "André ramalho",
 						foto: zagueiro1,
+						numero: 5,
 					},
 					{
 						nome: "Cacá",
 						foto: zagueiro2,
+						numero: 25,
 					},
 					{
 						nome: "Félix Torres",
 						foto: zagueiro3,
+						numero: 3,
 					},
 					{
 						nome: "Gustavo Henrique",
 						foto: zagueiro4,
+						numero: 13,
 					},
 					{
 						nome: "João Pedro",
 						foto: zagueiro5,
+						numero: 47,
 					},
 				],
 			},
@@ -112,26 +120,32 @@ const elencoCompleto = [
 					{
 						nome: "Diego Palacios",
 						foto: lateral1,
+						numero: 6,
 					},
 					{
 						nome: "Fabrizio Angileri",
 						foto: lateral2,
+						numero: 26,
 					},
 					{
 						nome: "Hugo",
 						foto: lateral3,
+						numero: 46,
 					},
 					{
 						nome: "Léo Mana",
 						foto: lateral4,
+						numero: 33,
 					},
 					{
-						nome: "Fabrizio Angileri",
+						nome: "Matheuzinho",
 						foto: lateral5,
+						numero: 2,
 					},
 					{
-						nome: "Fabrizio Angileri",
+						nome: "Matheus Bidu",
 						foto: lateral6,
+						numero: 21,
 					},
 				],
 			},
@@ -141,34 +155,42 @@ const elencoCompleto = [
 					{
 						nome: "André carrillo",
 						foto: meias1,
+						numero: 19,
 					},
 					{
 						nome: "Breno bidon",
 						foto: meias2,
+						numero: 27,
 					},
 					{
 						nome: "Charles",
 						foto: meias3,
+						numero: 35,
 					},
 					{
 						nome: "José Martínez",
 						foto: meias4,
+						numero: 70,
 					},
 					{
 						nome: "Ryan",
 						foto: meias5,
+						numero: 37,
 					},
 					{
 						nome: "Maycon",
 						foto: meias6,
+						numero: 7,
 					},
 					{
 						nome: "Raniele",
 						foto: meias7,
+						numero: 14,
 					},
 					{
 						nome: "Rodrigo Garro",
 						foto: meias8,
+						numero: 8,
 					},
 				],
 			},
@@ -178,26 +200,32 @@ const elencoCompleto = [
 					{
 						nome: "Héctor Hernández",
 						foto: atacantes1,
+						numero: 22,
 					},
 					{
 						nome: "Kayke",
 						foto: atacantes2,
+						numero: 31,
 					},
 					{
 						nome: "Memphis",
 						foto: atacantes3,
+						numero: 10,
 					},
 					{
 						nome: "Romero",
 						foto: atacantes4,
+						numero: 11,
 					},
 					{
 						nome: "Talles Magno",
 						foto: atacantes5,
+						numero: 43,
 					},
 					{
 						nome: "Yuri alberto",
 						foto: atacantes6,
+						numero: 9,
 					},
 				],
 			},
@@ -207,20 +235,24 @@ const elencoCompleto = [
 				posicao: "Goleiras",
 				jogadores: [
 					{
-						nome: "Lele",
+						nome: "Lelê",
 						foto: goleira1,
+						numero: 12,
 					},
 					{
 						nome: "Kemelli",
 						foto: goleira2,
+						numero: 24,
 					},
 					{
 						nome: "Nicole",
 						foto: goleira3,
+						numero: 1,
 					},
 					{
 						nome: "Rillary",
 						foto: goleira4,
+						numero: 32,
 					},
 				],
 			},
@@ -230,26 +262,32 @@ const elencoCompleto = [
 					{
 						nome: "Duda Mineira",
 						foto: zagueira1,
+						numero: 33,
 					},
 					{
 						nome: "Leticia Teles",
 						foto: zagueira2,
+						numero: 3,
 					},
 					{
 						nome: "Thaís Ferreira",
 						foto: zagueira3,
+						numero: 5,
 					},
 					{
 						nome: "Thais Regina",
 						foto: zagueira4,
+						numero: 4,
 					},
 					{
 						nome: "Erika",
 						foto: zagueira5,
+						numero: 99,
 					},
 					{
 						nome: "Mariza",
 						foto: zagueira6,
+						numero: 20,
 					},
 				],
 			},
@@ -259,18 +297,22 @@ const elencoCompleto = [
 					{
 						nome: "Letícia Santos",
 						foto: lateralFem1,
+						numero: 2,
 					},
 					{
 						nome: "Paulinha",
 						foto: lateralFem2,
+						numero: 21,
 					},
 					{
 						nome: "Tamires",
 						foto: lateralFem3,
+						numero: 37,
 					},
 					{
 						nome: "Juliete",
 						foto: lateralFem4,
+						numero: 22,
 					},
 				],
 			},
@@ -280,34 +322,42 @@ const elencoCompleto = [
 					{
 						nome: "Dayana Rodríguez",
 						foto: meia1,
+						numero: 31,
 					},
 					{
 						nome: "Duda Sampaio",
 						foto: meia2,
+						numero: 27,
 					},
 					{
 						nome: "Gi Fernandes",
 						foto: meia3,
+						numero: 23,
 					},
 					{
 						nome: "Juliana Passari",
 						foto: meia4,
+						numero: 15,
 					},
 					{
 						nome: "Letícia Monteiro",
 						foto: meia5,
+						numero: 19,
 					},
 					{
 						nome: "Yaya",
 						foto: meia6,
+						numero: 8,
 					},
 					{
 						nome: "Gabi Zanotti",
 						foto: meia7,
+						numero: 10,
 					},
 					{
 						nome: "Vic Albuquerque",
 						foto: meia8,
+						numero: 17,
 					},
 				],
 			},
@@ -317,38 +367,47 @@ const elencoCompleto = [
 					{
 						nome: "Andressa Alves",
 						foto: atacante1,
+						numero: 9,
 					},
 					{
 						nome: "Ariel Godoi",
 						foto: atacante2,
+						numero: 94,
 					},
 					{
 						nome: "Carol Nogueira",
 						foto: atacante3,
+						numero: 77,
 					},
 					{
 						nome: "Ellen",
 						foto: atacante4,
+						numero: 47,
 					},
 					{
 						nome: "Eudimilla",
 						foto: atacante5,
+						numero: 11,
 					},
 					{
 						nome: "Gisela Robledo",
 						foto: atacante6,
+						numero: 7,
 					},
 					{
 						nome: "Jaqueline",
 						foto: atacante7,
+						numero: 30,
 					},
 					{
 						nome: "Jhonson",
 						foto: atacante8,
+						numero: 40,
 					},
 					{
 						nome: "Manu Olivan",
 						foto: atacante9,
+						numero: 18,
 					},
 				],
 			},
