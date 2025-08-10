@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-
+import { useEffect, useState } from "react";
+import { Skeleton } from "@/components/ui/skeleton";
 import {
 	Accordion,
 	AccordionContent,
@@ -14,6 +14,8 @@ import ScrollReveal from "scrollreveal";
 // ... seus outros imports
 
 const Historia = () => {
+	const [loaded, setLoaded] = useState(false);
+
 	useEffect(() => {
 		ScrollReveal().reveal(".post__left", {
 			origin: "left",
@@ -49,11 +51,20 @@ const Historia = () => {
 							>
 								<div className="card__header">
 									<img src={emblema} className="image__postagem" alt="" />
-									<div className="card__image-wrapper">
+
+									<div className="card__image-wrapper relative">
+										{/* Skeleton enquanto a imagem não carrega */}
+										{!loaded && (
+											<Skeleton className="absolute inset-0 w-full h-full rounded" />
+										)}
+
 										<img
 											src={item.image}
-											alt="Postagem 1"
-											className="card__image"
+											alt={`Postagem ${index + 1}`}
+											className={`card__image transition-opacity duration-500 ${
+												loaded ? "opacity-100" : "opacity-0"
+											}`}
+											onLoad={() => setLoaded(true)}
 										/>
 									</div>
 								</div>

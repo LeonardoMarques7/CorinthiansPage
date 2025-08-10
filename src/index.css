@@ -641,17 +641,16 @@ main {
 }
 
 .container__actions {
-  position: sticky;
-  margin: 2svw;
+  position: fixed;
   left: 90svw;
   justify-content: end;
   width: 100%;
   display: flex;
+  bottom: 2svh;
   gap: .5rem;
   text-align: center;
   transition: .5s ease-in-out;
   width: fit-content;
-  bottom: 2svh;
 }
 
 .botao-topo {
@@ -1070,8 +1069,8 @@ main {
   position: relative;
   object-fit: cover;
   object-position: top;
-  height: 35svh;
-  background-color: #000000a6;
+  height: 40svh;
+  background-color: #000000a2;
   border-radius: 10px;
 }
 

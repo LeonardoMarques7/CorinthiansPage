@@ -155,7 +155,7 @@ function App() {
 			{/* Footer */}
 			<Footer />
 			<span
-				className={`container__actions  transition-all duration-500 ease-in-out sticky top-2 flex gap-2
+				className={`container__actions  transition-all duration-500 ease-in-out sticky flex gap-2
 	${
 		mostrarBotao
 			? "opacity-100 translate-y-0"
