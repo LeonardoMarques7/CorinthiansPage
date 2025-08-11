@@ -68,7 +68,7 @@ const Elenco = () => {
 										{grupo.jogadores.map((jogador, idx) => (
 											<CarouselItem
 												key={idx}
-												className={`item__jogador w-fit z-99 relative basis-[80svw] md:basis-1/4 sm:basis-1/2 ${
+												className={`item__jogador z-99 relative basis-[80svw] md:basis-1/4 sm:basis-1/3 ${
 													idx % 2 === 0
 														? "polaroid__primary rotate-2"
 														: "polaroid__secondary rotate-[-2deg]"

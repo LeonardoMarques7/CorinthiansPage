@@ -642,7 +642,7 @@ main {
 
 .container__actions {
   position: fixed;
-  left: 90svw;
+  right: 2svw;
   justify-content: end;
   width: 100%;
   display: flex;
@@ -1054,9 +1054,11 @@ main {
 
 .item__jogador {
   padding: 10px;
+  flex-basis: 250px;
   background-color: #fff;
   display: flex;
-  height: 100%;
+  width: 100%;
+  height: auto;
   margin: 0;
   flex-direction: column;
   border-radius: 15px !important;
@@ -1068,8 +1070,9 @@ main {
   width: 100%;
   position: relative;
   object-fit: cover;
-  object-position: top;
-  height: 40svh;
+  max-height: 15rem;
+  height: 100%;
+  object-position: center;
   background-color: #000000a2;
   border-radius: 10px;
 }
@@ -1089,6 +1092,7 @@ main {
 .footer__polaroid {
   font-size: 40px;
   display: flex;
+  text-wrap: nowrap;
   padding: 2rem;
   flex-direction: column-reverse;
   justify-content: center;
@@ -1396,10 +1400,22 @@ main {
   .item__jogador {
     flex-basis: calc(1/5 * 100%)
   }
+
+}
+
+@media (width <= 90rem) {
+  .footer__polaroid {
+    font-size: 30px;
+  }
 }
 
 /* Moblie */
 @media (max-width: 768px) {
+  /* Botões */
+  .container__actions {
+    left: auto;
+    right: 2svw;
+  }
 
   /* Header Moblie*/
 
@@ -1826,5 +1842,4 @@ main {
   .footer__info .container__redes-sociais {
     display: flex;
   }
-
 }
