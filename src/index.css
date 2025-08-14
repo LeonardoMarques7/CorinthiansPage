@@ -1089,9 +1089,9 @@ main {
 .badge__numero {
   color: #a5a5a5b4;
   position: absolute;
-  top: .5rem;
+  top: 1rem;
   right: 1.5rem;
-  font-size: 50px;
+  font-size: 35px;
 }
 
 .footer__polaroid {
