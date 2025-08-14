@@ -1058,7 +1058,7 @@ main {
   background-color: #fff;
   display: flex;
   width: 100%;
-  height: auto;
+  height: 100%;
   margin: 0;
   flex-direction: column;
   border-radius: 15px !important;
@@ -1069,12 +1069,17 @@ main {
 .item__jogador img {
   width: 100%;
   position: relative;
+  height: 19rem;
   object-fit: cover;
-  max-height: 15rem;
-  height: 100%;
-  object-position: center;
+  object-position: top;
   background-color: #000000a2;
   border-radius: 10px;
+}
+
+@media (width >= 90rem) {
+  .item__jogador img {
+    height: 25rem;
+  }
 }
 
 .item__jogador:last-child {
