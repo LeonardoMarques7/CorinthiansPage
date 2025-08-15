@@ -69,7 +69,7 @@ const Elenco = () => {
 										{grupo.jogadores.map((jogador, idx) => (
 											<CarouselItem
 												key={idx}
-												className={`item__jogador z-99 relative basis-[80svw] md:basis-1/4 sm:basis-1/3 `}
+												className={`item__jogador z-99 relative basis-[80svw] md:basis-1/4 sm:basis-1/3`}
 											>
 												<motion.div
 													initial={{ opacity: 0, y: 100 }} // começa invisível e mais abaixo

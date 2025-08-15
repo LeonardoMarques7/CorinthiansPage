@@ -98,13 +98,13 @@ nav {
 .logo__corinthians {
   width: 100%;
   max-width: 100px;
-  height: 100px;
   position: absolute;
   object-fit: cover;
   width: 100%;
+  transition: .5s ease-in-out;
+  top: 2.5svh;
   left: 50%;
   transform: translateX(-50%);
-  top: 1svh;
   z-index: 10;
 }
 
@@ -1066,7 +1066,7 @@ main {
 
 .item__jogador {
   padding: 10px;
-  flex-basis: 250px;
+  flex-basis: auto;
   background-color: #fff;
   display: flex;
   width: 100%;
@@ -1642,14 +1642,17 @@ main {
   }
 
   .group__action {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .carroseul__proximo,
   .carroseul__voltar {
-    padding: 10px;
-    cursor: pointer;
-    margin: 0;
+    padding: 15px;
+    height: 25px;
+    background-color: #242424;
+    border-color: #242424;
+    color: #fff;
+    width: 25px;
   }
 
   .badge__jogador {
