@@ -11,7 +11,6 @@ import {
 	SheetTitle,
 	SheetTrigger,
 } from "@/components/ui/sheet";
-
 import EmblemaCorinthians from "../assets/imagens/emblema__header.png";
 
 const Header = () => {

@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { ArrowRight, Badge, ChevronRight } from "lucide-react";
+import { motion } from "motion/react";
 
 const Elenco = () => {
 	const [elencoExibido, setElencoExibido] = useState(
@@ -70,7 +71,15 @@ const Elenco = () => {
 												key={idx}
 												className={`item__jogador z-99 relative basis-[80svw] md:basis-1/4 sm:basis-1/3 `}
 											>
-												<img src={jogador.foto} alt={jogador.nome} />
+												<motion.div
+													initial={{ opacity: 0, y: 100 }} // começa invisível e mais abaixo
+													whileInView={{ opacity: 1, y: 0 }} // aparece e sobe
+													transition={{ duration: 0.6, ease: "easeOut" }}
+													viewport={{ once: true }} // anima só na primeira vez que aparece
+													className="w-full h-full flex flex-col items-center"
+												>
+													<img src={jogador.foto} alt={jogador.nome} />
+												</motion.div>
 												<span className="badge__numero">#{jogador.numero}</span>
 												<div className="footer__polaroid">
 													<div className="">{jogador.nome}</div>
