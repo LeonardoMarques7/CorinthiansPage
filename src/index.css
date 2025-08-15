@@ -50,10 +50,10 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 5px;
-  background-image: linear-gradient(to "#313131");
+  height: 4px;
+  background-image: linear-gradient(to "red");
   background: #fff;
-  background: linear-gradient(90deg, #9b9b9b 10%, rgba(0, 0, 0, 1) 70%);
+  background: linear-gradient(90deg, rgb(211, 0, 0) 15%, red 70%);
   /* cor da barra */
   z-index: 9999;
 }
@@ -96,16 +96,15 @@ nav {
 }
 
 .logo__corinthians {
-  mix-blend-mode: difference;
   width: 100%;
   max-width: 100px;
-  filter:invert(1);
+  height: 100px;
   position: absolute;
   object-fit: cover;
   width: 100%;
-  top: 2.5svh;
   left: 50%;
   transform: translateX(-50%);
+  top: 1svh;
   z-index: 10;
 }
 
