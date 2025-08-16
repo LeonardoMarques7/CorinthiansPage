@@ -35,7 +35,7 @@ const Partidas = () => {
 					{partidasData.map((partida, idx) => (
 						<CarouselItem
 							key={idx}
-							className={`carroseul__item w-fit z-99 basis-full relative sm:basis-1/2 ${
+							className={`carroseul__item w-fit z-99 basis-auto relative ${
 								idx % 2 === 0 ? "partida__primary" : "partida__secondary"
 							}`}
 						>

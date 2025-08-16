@@ -33,7 +33,7 @@ function AccordionTrigger({ className, children, ...props }) {
 				<ChevronDownIcon className="chevron-icon button text-muted-foreground size-4 shrink-0 translate-y-0.5 transition-transform duration-200" />
 			</AccordionPrimitive.Trigger>
 
-			<style jsx>{`
+			<style>{`
 				[data-state="closed"] .chevron-icon {
 					transform: rotate(180deg);
 				}

@@ -142,14 +142,24 @@ nav {
   width: auto;
   height: auto;
   border-radius: 10px;
+  transition: .5s ease-in-out;
 }
 
-.item__link a:hover .icon__header{
+.item__link a:hover .icon__header ,.item__link:focus .icon__header ,
+.item__link:active .icon__header{
   background-color: #000;
   color: #fff;
   padding: 5px;
   width: auto;
   height: auto;
+}
+
+.item__link a .span__link {
+  border: 1px solid transparent;
+}
+
+.item__link a:hover .span__link {
+  border-bottom: 2px solid #242424;
 }
 
 
@@ -283,11 +293,11 @@ main {
 
 @media (width <=50rem) {
   .carroseul__item {
-    flex-basis: calc(1/1 * 100%)
+    flex-basis: 95svw;
   }
 
   .section__partidas {
-    padding: 0svh 4svw;
+    padding: 0svh 2svw;
   }
 }
 
@@ -299,13 +309,14 @@ main {
   cursor: auto;
 }
 
-.carroseul__proximo, .carroseul__voltar {
+.carroseul__proximo, .carroseul__ {
   position: relative !important;
-  border: 1px solid #eee;
-  padding: 30px;
+  border: 1px solid;
+  background-color: #242424;
+  border-color: #242424;
+  padding: 20px;
   cursor: pointer;
-  background-color: #ffffffc5;
-  color: #242424;
+  color: #fff;
   margin: 0;
 }
 
@@ -1507,6 +1518,19 @@ main {
 
   /* Header Moblie*/
 
+  nav {
+    display: flex;
+    padding: 2rem;
+    height: 12svh;
+    z-index: 99;
+    justify-content: space-between;
+    position: sticky;
+    bottom: 0px;
+    width: auto;
+    align-items: center;
+    background-color: #fff;
+  }
+
   .container__redes-sociais {
     display: none;
   }
@@ -1529,6 +1553,8 @@ main {
     flex: 1;
   }
 
+  
+
   .header__desktop {
     display: none;
   }
@@ -1550,7 +1576,7 @@ main {
    }
 
    .icon__header {
-    width: 20px;
+    width: auto;
    }
 
    /* Main */
@@ -1736,7 +1762,7 @@ main {
   }
 
   .carroseul__proximo,
-  .carroseul__voltar {
+  .carroseul__ {
     padding: 15px;
     height: 25px;
     background-color: #242424;
