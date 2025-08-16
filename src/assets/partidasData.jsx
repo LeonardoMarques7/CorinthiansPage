@@ -14,13 +14,6 @@ import LogoAtleticoMG from "../assets/imagens/times/logoAtleticoMG.png";
 const partidasData = [
 	{
 		competicao: "Brasileirão",
-		time1: { sigla: "JUT", logo: LogoJuventude },
-		time2: { sigla: "COR", logo: LogoCorinthians },
-		dataHora: "11/08/2025 20h00",
-		local: "RS - Caxias do Sul - Alfredo Jaconi",
-	},
-	{
-		competicao: "Brasileirão",
 		time1: { sigla: "COR", logo: LogoCorinthians },
 		time2: { sigla: "BAH", logo: LogoBahia },
 		dataHora: "16/08/2025 21h00",

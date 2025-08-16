@@ -4,6 +4,14 @@ import LogoYouTube from "../assets/imagens/logo__yt.png";
 import LogoTikTok from "../assets/imagens/logo__ttk.png";
 import LogoX from "../assets/imagens/logo__x.png";
 import EmblemaCorinthians from "../assets/imagens/logo__pequena__normal.png";
+import {
+	BookOpen,
+	Home,
+	Newspaper,
+	ShoppingCart,
+	Trophy,
+	Users,
+} from "lucide-react";
 
 const Header = () => {
 	return (
@@ -49,16 +57,34 @@ const Header = () => {
 				</a>
 				<ul className="container__links">
 					<li className="item__link">
-						<a href="#Historia">História</a>
+						<a href="#Historia">
+							<Home />
+						</a>
 					</li>
 					<li className="item__link">
-						<a href="#Titulos">Títulos</a>
+						<a href="#Historia">
+							<BookOpen />
+						</a>
 					</li>
 					<li className="item__link">
-						<a href="#Elenco">Elenco</a>
+						<a href="#Titulos">
+							<Trophy />
+						</a>
 					</li>
 					<li className="item__link">
-						<a href="#Noticias">Notícias</a>
+						<a href="#Elenco">
+							<Users />
+						</a>
+					</li>
+					<li className="item__link">
+						<a href="#Noticias">
+							<Newspaper />
+						</a>
+					</li>
+					<li className="item__link">
+						<a href="#Loja">
+							<ShoppingCart className="size-5" />
+						</a>
 					</li>
 				</ul>
 			</nav>
