@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@custom-variant dark (&:is(.dark *));
 
 * {
   margin: 0;
@@ -15,6 +16,14 @@
   background-image: linear-gradient(to "#313131");
   background: #313131;
     background: linear-gradient(90deg, rgba(49, 49, 49, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    --sidebar: hsl(0 0% 98%);
+    --sidebar-foreground: hsl(240 5.3% 26.1%);
+    --sidebar-primary: hsl(240 5.9% 10%);
+    --sidebar-primary-foreground: hsl(0 0% 98%);
+    --sidebar-accent: hsl(240 4.8% 95.9%);
+    --sidebar-accent-foreground: hsl(240 5.9% 10%);
+    --sidebar-border: hsl(220 13% 91%);
+    --sidebar-ring: hsl(217.2 91.2% 59.8%);
 
 }
 
@@ -109,7 +118,6 @@ nav {
 .container__links {
   display: flex;
   gap: 1.5rem;
-  font-family: BigNoodle;
   align-items: center;
 }
 
@@ -117,13 +125,33 @@ nav {
   display: flex;
   align-items: center;
   font-size: 20px;
+  font-family: BigNoodle;
+  transition: .5s ease-in-out;
   gap: .5rem;
   color: #242424;
 }
 
-.item__link:hover a {
-  transform: scale(1.1);
+.header__desktop {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
 }
+
+.icon__header {
+  padding: 5px;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+}
+
+.item__link a:hover .icon__header{
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  width: auto;
+  height: auto;
+}
+
 
 /* Separação */
 .separacao {
@@ -201,7 +229,6 @@ main {
   cursor: pointer;
   width: auto;
 }
-
 
 .container__carroseul:hover{
   cursor: grab;
@@ -437,7 +464,6 @@ main {
   color: #232323;
 }
 
-
 /* História */
 
 .accordion__historia {
@@ -455,7 +481,6 @@ main {
   border-radius: 5px;
   padding: .5rem 1rem;
 }
-
 
 .container__historia {
   padding: 2svw;
@@ -1750,7 +1775,7 @@ main {
     padding: 4%;
     font-family: radioCanada;
   }
-  
+
   .card__noticia {
     flex-direction: column;
     gap: .5rem;
@@ -1788,7 +1813,7 @@ main {
     height: 100%;
     width: 100%;
   }
-  
+
   .actions__creditos {
     font-size: 12px;
   }
@@ -1798,7 +1823,7 @@ main {
     position: relative;
     top: -.5rem;
   }
-  
+
   .container__creditos {
     text-align: center;
     display: flex;
@@ -1867,7 +1892,6 @@ main {
   .card__noticia__header {
     justify-content: center;
   }
-
 
   /* Footer */
 
