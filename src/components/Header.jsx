@@ -11,7 +11,7 @@ import {
 	SheetTitle,
 	SheetTrigger,
 } from "@/components/ui/sheet";
-import EmblemaCorinthians from "../assets/imagens/logo__header__secondary.png";
+import EmblemaCorinthians from "../assets/imagens/logo__pequena__normal.png";
 
 const Header = () => {
 	return (
