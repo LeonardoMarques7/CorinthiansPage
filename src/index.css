@@ -1716,6 +1716,10 @@ main {
     gap: .5rem;
   }
 
+  .container__other .container__noticias .card__noticia:hover {
+    padding: 10px;
+  }
+
   .header__noticia {
     display: flex;
     gap: 0rem;
