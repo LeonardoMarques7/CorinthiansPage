@@ -13,12 +13,7 @@ import "lightgallery/css/lg-autoplay.css";
 import "lightgallery/css/lg-fullscreen.css";
 
 // import plugins
-import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
-import lgAutoplay from "lightgallery/plugins/autoplay";
-import lgFullscreen from "lightgallery/plugins/fullscreen";
-import lgShare from "lightgallery/plugins/share";
-import lgRotate from "lightgallery/plugins/rotate";
 
 const Postagens = () => {
 	const [loaded, setLoaded] = useState(false);
@@ -48,10 +43,10 @@ const Postagens = () => {
 									onInit={onInit}
 									speed={500}
 									plugins={[lgZoom]}
-									zoom={true} // habilita zoom
-									download={true} // botão de download
-									closable={true} // botão fechar
-									escKey={true} // fechar com ESC
+									zoom={true}
+									download={true}
+									closable={true}
+									escKey={true}
 								>
 									<a href={item.image}>
 										<img

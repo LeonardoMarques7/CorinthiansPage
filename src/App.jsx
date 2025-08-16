@@ -13,11 +13,6 @@ import { useEffect, useRef, useState } from "react";
 import { Toaster, toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { ChevronUpIcon, Quote } from "lucide-react";
-import ronaldoImg from "./assets/imagens/foto__ronaldo.png";
-import socratesImg from "./assets/imagens/foto__socrates.png";
-import marcelinhoImg from "./assets/imagens/foto__marcelinho.png";
-import titeImg from "./assets/imagens/foto__tite.png";
-import robertoImg from "./assets/imagens/foto__roberto.png";
 import useIsMobile from "./components/hooks/useIsMoblie";
 
 // ... seus contatosLendarios
@@ -102,9 +97,6 @@ function App() {
 			>
 				<Button className="botao-topo" onClick={subirAoTopo}>
 					<ChevronUpIcon size={20} />
-				</Button>
-				<Button onClick={chamadaRonaldo} className="button__trigger">
-					<Quote />
 				</Button>
 			</span>
 		</div>

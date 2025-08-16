@@ -3,14 +3,6 @@ import LogoInsta from "../assets/imagens/logo__insta.png";
 import LogoYouTube from "../assets/imagens/logo__yt.png";
 import LogoTikTok from "../assets/imagens/logo__ttk.png";
 import LogoX from "../assets/imagens/logo__x.png";
-import {
-	Sheet,
-	SheetContent,
-	SheetDescription,
-	SheetHeader,
-	SheetTitle,
-	SheetTrigger,
-} from "@/components/ui/sheet";
 import EmblemaCorinthians from "../assets/imagens/logo__pequena__normal.png";
 
 const Header = () => {

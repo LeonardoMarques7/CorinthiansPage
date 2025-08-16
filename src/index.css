@@ -1456,7 +1456,7 @@ main {
   /* Botões */
   .container__actions {
     left: auto;
-    right: 2svw;
+    right: 4svw;
   }
 
   /* Header Moblie*/
@@ -1481,7 +1481,7 @@ main {
   } */
 
    .logo__corinthians {
-    width: 40px;
+    width: 50px;
     left: 0;
     top: 0;
     position: relative;

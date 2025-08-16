@@ -1,7 +1,6 @@
 import React from "react";
 import EmblemaCorinthiansGrande from "../assets/imagens/emblema__main__3d.png";
 import faixas from "../assets/imagens/faixas.png";
-import Partidas from "./Partidas";
 
 const Main = () => {
 	return (
