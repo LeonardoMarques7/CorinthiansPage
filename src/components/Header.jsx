@@ -12,7 +12,6 @@ import {
 	Trophy,
 	Users,
 } from "lucide-react";
-
 const Header = () => {
 	return (
 		<>
@@ -58,32 +57,38 @@ const Header = () => {
 				<ul className="container__links">
 					<li className="item__link">
 						<a href="#Historia">
-							<Home />
+							<Home className="icon__header" />
+							<span className="span__link">Home</span>
 						</a>
 					</li>
 					<li className="item__link">
 						<a href="#Historia">
-							<BookOpen />
+							<BookOpen className="icon__header" />
+							<span className="span__link">História</span>
 						</a>
 					</li>
 					<li className="item__link">
 						<a href="#Titulos">
-							<Trophy />
+							<Trophy className="icon__header" />
+							<span className="span__link">Títulos</span>
 						</a>
 					</li>
 					<li className="item__link">
 						<a href="#Elenco">
-							<Users />
+							<Users className="icon__header" />
+							<span className="span__link">Elenco</span>
 						</a>
 					</li>
 					<li className="item__link">
 						<a href="#Noticias">
-							<Newspaper />
+							<Newspaper className="icon__header" />
+							<span className="span__link">Notícias</span>
 						</a>
 					</li>
 					<li className="item__link">
 						<a href="#Loja">
-							<ShoppingCart className="size-5" />
+							<ShoppingCart className="icon__header" />
+							<span className="span__link">Loja</span>
 						</a>
 					</li>
 				</ul>
