@@ -15,7 +15,7 @@ import {
 const Header = () => {
 	return (
 		<>
-			<nav className="barra__navegacao">
+			<nav className="barra__navegacao items-center">
 				<ul className="container__redes-sociais">
 					<li className="brand__rede">
 						<a
@@ -54,7 +54,46 @@ const Header = () => {
 						alt="Emblema do Corinthians"
 					/>
 				</a>
-				<ul className="container__links">
+				<ul className="header__desktop flex items-center flex-1 justify-between">
+					<li className="item__link">
+						<a href="#Historia">
+							<Home className="icon__header" />
+							<span className="span__link">Home</span>
+						</a>
+					</li>
+					<li className="item__link">
+						<a href="#Historia">
+							<BookOpen className="icon__header" />
+							<span className="span__link">História</span>
+						</a>
+					</li>
+					<li className="item__link">
+						<a href="#Titulos">
+							<Trophy className="icon__header" />
+							<span className="span__link">Títulos</span>
+						</a>
+					</li>
+					<li className="item__link">
+						<a href="#Elenco">
+							<Users className="icon__header" />
+							<span className="span__link">Elenco</span>
+						</a>
+					</li>
+					<li className="item__link">
+						<a href="#Noticias">
+							<Newspaper className="icon__header" />
+							<span className="span__link">Notícias</span>
+						</a>
+					</li>
+					<li className="item__link">
+						<a href="#Loja">
+							<ShoppingCart className="icon__header" />
+							<span className="span__link">Loja</span>
+						</a>
+					</li>
+				</ul>
+				{/* Moblie */}
+				<ul className="header__moblie">
 					<li className="item__link">
 						<a href="#Historia">
 							<Home className="icon__header" />

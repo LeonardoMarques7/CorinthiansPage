@@ -1468,6 +1468,10 @@ main {
   }
 }
 
+.header__moblie {
+  display: none;
+}
+
 /* Moblie */
 @media (max-width: 768px) {
   /* Botões */
@@ -1492,6 +1496,16 @@ main {
     align-items: center;
     justify-content: center;
     width: 100%;
+  }
+
+  .header__moblie {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  .header__desktop {
+    display: none;
   }
 
   /* .logo__corinthians {
