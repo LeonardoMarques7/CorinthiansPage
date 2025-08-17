@@ -56,7 +56,7 @@ const Header = () => {
 				</a>
 				<ul className="header__desktop flex items-center flex-1 justify-between">
 					<li className="item__link">
-						<a href="#Historia">
+						<a href="#Home">
 							<Home className="icon__header" />
 							<span className="span__link">Home</span>
 						</a>
@@ -95,7 +95,7 @@ const Header = () => {
 				{/* Moblie */}
 				<ul className="header__moblie">
 					<li className="item__link">
-						<a href="#Historia">
+						<a href="#Home">
 							<Home className="icon__header" />
 							<span className="span__link">Home</span>
 						</a>

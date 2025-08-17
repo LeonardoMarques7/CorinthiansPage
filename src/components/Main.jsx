@@ -5,7 +5,7 @@ import faixas from "../assets/imagens/faixas.png";
 const Main = () => {
 	return (
 		<>
-			<main>
+			<main id="Home">
 				<div className="main__texts">
 					<h1 className="main__title">Sport Club Corinthians Paulista</h1>
 					<h2 className="main__subtitle">

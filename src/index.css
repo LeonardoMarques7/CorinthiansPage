@@ -1414,6 +1414,227 @@ main {
   background-color: #ffffff7a;
 }
 
+/* Loja */
+.container__loja {
+  padding: 0rem 2svw;
+}
+
+.loja__title {
+  font-size: 100px;
+  font-family: BigNoodle;
+  line-height: normal;
+}
+
+.loja__subtitle {
+  font-family: system-ui,
+    -apple-system;
+    text-transform: uppercase;
+  color: #B5B5B5;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.loja__item__destaque {
+  margin: 4svh auto;
+  display: flex;
+  gap: 3rem;
+}
+
+.loja__item__image{
+  width: 1054px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.item__destaque__header {
+  color: #eee;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  text-transform: uppercase;
+}
+.item__destaque__header .separacao__div {
+  width: 5px;
+  height: 5px;
+}
+
+.item__destaque__content, .produto__content__card {
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  gap: 1rem;
+  margin:1rem 0rem;
+}
+
+.item__destaque__title {
+  font-size: 50px;
+  font-family: system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-weight: 600;
+  line-height: 55px;
+}
+
+.item__destaque__description {
+  font-size: 20px;
+}
+
+.item__destaque__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.item__destaque__badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.item__destaque__preco {
+  color: green;
+  font-size: 40px;
+}
+
+.item__destaque__preco__antigo {
+  text-decoration: line-through;
+  font-size: 20px;
+  color: #ccc;
+}
+
+.item__destaque__btn {
+  background-color: #fff;
+  color: #242424;
+  border-radius: 5px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  transition: .5s ease-in-out;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.item__destaque__btn:hover {
+  opacity: .7;
+}
+
+/* Separador */
+
+.separator__loja {
+  text-align: center;
+  font-size: 50px;
+  border-bottom: 4px solid #fff;
+  width: fit-content;
+  margin: 2rem auto;
+  font-family: bigNoodle;
+}
+
+/* Container Loja */
+
+.produto__card__image {
+  border-radius: 5px 5px 0px 0px;
+}
+
+.item__produto {
+  width: 100%;
+}
+
+.produto__card__image {
+  width: 100%;
+}
+
+
+.produto__card__title {
+  font-size: 30px;
+  min-height: 100px;
+  line-height: 35px;
+}
+
+.produto__content__card {
+  padding: 0rem 1rem;
+}
+
+.produto__card__description {
+  color: #eee;
+  border-bottom: 1px solid #333;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.produto__badge {
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.produto__preco {
+  color: green;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.produto__preco__antigo {
+  text-decoration: line-through;
+  font-size: 20px;
+  color: #ccc;
+}
+
+.produto__btn {
+  background-color: #fff;
+  color: #242424;
+  border-radius: 5px;
+  width: fit-content;
+  gap: 1rem;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  transition: .5s ease-in-out;
+  align-items: center;
+}
+
+.produto__btn:hover {
+  opacity: .7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Footer */
 
 .container__footer {
@@ -1485,6 +1706,8 @@ main {
     display: none;
   }
 
+  
+
   .logo__corinthians {
       position: relative;
       width: 50px;
@@ -1502,6 +1725,21 @@ main {
     display: flex;
     align-items: center;
   }
+
+  /* Loja */
+  .produto__badge {
+    gap: 5px;
+    align-items: center;
+  }
+  
+  .produto__preco {
+    font-size: 20px;
+  }
+
+  .produto__preco__antigo {
+    font-size: 12px;
+  }
+
 }
 
 .header__moblie {
@@ -1510,6 +1748,8 @@ main {
 
 /* Moblie */
 @media (max-width: 768px) {
+  /* Loja */
+
   /* Botões */
   .container__actions {
     left: auto;

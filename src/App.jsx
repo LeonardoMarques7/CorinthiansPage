@@ -14,6 +14,7 @@ import { Toaster, toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { ChevronUpIcon, Quote } from "lucide-react";
 import useIsMobile from "./components/hooks/useIsMoblie";
+import Loja from "./components/Loja";
 
 // ... seus contatosLendarios
 
@@ -83,6 +84,7 @@ function App() {
 			<Elenco />
 			<Separacao />
 			<Noticias />
+			<Loja />
 			<Footer />
 
 			{/* Botões flutuantes */}
