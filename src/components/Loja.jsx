@@ -9,19 +9,19 @@ import {
 	CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import ProdutoRating from "./ProdutoRating";
 
 const Loja = () => {
 	return (
 		<section className="container__loja" id="Loja">
-			<div className="loja__header">
-				<h2 className="loja__title">Loja</h2>
-				<span className="loja__subtitle">
-					Os produtos abaixo são vendidos na loja oficial da Nike. Ao clicar,
-					você será redirecionado para o site oficial.
-				</span>
-			</div>
-
-			<div className="loja__content">
+			<div className="container__destaque">
+				<div className="loja__header">
+					<h2 className="loja__title">Loja</h2>
+					<span className="loja__subtitle">
+						Os produtos abaixo são vendidos na loja oficial da Nike. Ao clicar,
+						você será redirecionado para o site oficial.
+					</span>
+				</div>
 				<div className="loja__item__destaque">
 					<img
 						src={camisaAwayTorcedor2025}
@@ -77,7 +77,8 @@ const Loja = () => {
 						</div>
 					</div>
 				</div>
-
+			</div>
+			<div className="loja__content">
 				<div className="separator__loja">COLEÇÃO COMPLETA</div>
 				<Carousel
 					plugins={[
@@ -87,59 +88,51 @@ const Loja = () => {
 					]}
 					className="container__carroseul relative"
 				>
-					<CarouselContent className="carroseul__content gap-4">
-						{produtosData.map((produto) => (
-							<CarouselItem
-								className="item__produto  w-fit z-99 relative basis-[80svw] md:basis-1/4 sm:basis-1/3"
-								key={produto.id}
-							>
-								<div className="produto__header__card">
-									<img
-										src={produto.imagem}
-										className="produto__card__image"
-										alt={produto.titulo}
-									/>
-								</div>
-								<div className="produto__content__card">
-									<h2 className="produto__card__title">{produto.titulo}</h2>
-
-									{/* Avaliação */}
-									<div className="produto__rating flex items-center gap-2">
-										<span className="stars">⭐⭐⭐⭐⭐</span>
-										<span className="rating__number">
-											{produto.avaliacao.nota ? (
-												<>
-													{produto.avaliacao.nota} ({produto.avaliacao.total}{" "}
-													avaliações)
-												</>
-											) : (
-												<>Sem avaliações</>
-											)}
-										</span>
+					<div className="sombra__carroseul">
+						<CarouselContent className="carroseul__content gap-4">
+							{produtosData.map((produto) => (
+								<CarouselItem
+									className="item__produto w-fit z-99 relative basis-[80svw] md:basis-1/3 sm:basis-1/3"
+									key={produto.id}
+								>
+									<div className="produto__header__card">
+										<img
+											src={produto.imagem}
+											className="produto__card__image"
+											alt={produto.titulo}
+										/>
 									</div>
+									<div className="produto__content__card">
+										<h2 className="produto__card__title">{produto.titulo}</h2>
 
-									<p className="produto__card__description">
-										{produto.descricao}
-									</p>
+										{/* Avaliação */}
+										<ProdutoRating
+											nota={produto.avaliacao.nota}
+											total={produto.avaliacao.total}
+										/>
+										<p className="produto__card__description">
+											{produto.descricao}
+										</p>
 
-									<div className="produto__footer__card">
-										<div className="produto__badge">
-											<span className="produto__preco">{produto.preco}</span>
-											<span className="produto__preco__antigo">
-												{produto.precoAntigo}
-											</span>
+										<div className="produto__footer__card">
+											<div className="produto__badge">
+												<span className="produto__preco">{produto.preco}</span>
+												<span className="produto__preco__antigo">
+													{produto.precoAntigo}
+												</span>
+											</div>
+											<button
+												onClick={() => (window.location.href = produto.link)}
+												className="produto__btn cursor-pointer"
+											>
+												Ver Produto
+											</button>
 										</div>
-										<button
-											onClick={() => (window.location.href = produto.link)}
-											className="produto__btn cursor-pointer"
-										>
-											Ver Produto
-										</button>
 									</div>
-								</div>
-							</CarouselItem>
-						))}
-					</CarouselContent>
+								</CarouselItem>
+							))}
+						</CarouselContent>
+					</div>
 					<div className="carroseul__loja">
 						<CarouselPrevious className="loja__carroseul__btn" />
 						<CarouselNext className="loja__carroseul__btn" />

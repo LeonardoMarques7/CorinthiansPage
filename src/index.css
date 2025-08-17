@@ -1415,7 +1415,7 @@ main {
 }
 
 /* Loja */
-.container__loja {
+.container__destaque {
   padding: 0rem 2svw;
 }
 
@@ -1435,7 +1435,7 @@ main {
 }
 
 .loja__item__destaque {
-  margin: 4svh auto;
+  margin: 4svh 0rem;
   font-family: RadioCanada;
   position: relative;
   border-radius: 16px;
@@ -1580,6 +1580,35 @@ main {
   border-radius: 5px 5px 0px 0px;
 }
 
+/* sombra lateral direita */
+.sombra__carroseul::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  /* largura do fade */
+  height: 100%;
+  background: linear-gradient(to left, rgba(27,
+    27,
+    27, 0.7), rgba(0, 0, 0, 0));
+  pointer-events: none;
+}
+
+.sombra__carroseul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 150px;
+  /* largura do fade */
+  height: 100%;
+  background: linear-gradient(to right, rgba(27, 27, 27, 0.7),
+    rgba(0, 0, 0, 0));
+  pointer-events: none;
+}
+
 .item__produto {
   display: flex;
   flex-direction: column;
@@ -1675,7 +1704,8 @@ main {
   flex: 1;
   justify-content: end;
   align-items: end;
-  position: relative;
+  position: absolute;
+  z-index: 99;
   gap: 1rem;
 }
 
@@ -1689,29 +1719,6 @@ main {
   color: #fff;
   margin: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Footer */
 
@@ -1838,8 +1845,8 @@ main {
   .item__destaque__footer {
     flex-direction: column-reverse;
   }
-
-  .container__loja {
+  
+  .container__destaque {
     padding: 0rem 4svw;
   }
 
@@ -1874,6 +1881,54 @@ main {
     width: 100%;
   }
 
+  .produto__card__description {
+    display: none;
+  }
+
+  .item__produto {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    min-height:
+    auto;
+    max-height: 850px;
+  }
+
+  .produto__rating {
+    font-size: 10px;
+    justify-content: start;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sombra__carroseul::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    /* largura do fade */
+    height: 100%;
+    background: linear-gradient(to left, rgba(27,
+          27,
+          27, 0.7), rgba(0, 0, 0, 0));
+    pointer-events: none;
+  }
+
+  .sombra__carroseul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 50px;
+    /* largura do fade */
+    height: 100%;
+    background: linear-gradient(to right, rgba(27, 27, 27, 0.7),
+        rgba(0, 0, 0, 0));
+    pointer-events: none;
+  }
 
   /* Botões */
   .container__actions {
