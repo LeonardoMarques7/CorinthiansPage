@@ -1500,7 +1500,7 @@ main {
 }
 
 .item__destaque__preco {
-  color: green;
+  color: red;
   font-size: 40px;
 }
 
@@ -1526,6 +1526,14 @@ main {
   opacity: .7;
 }
 
+.item__destaque__preco {
+  font-size: 30px;
+}
+
+.item__destaque__preco__antigo {
+  font-size: 18px;
+}
+
 /* Separador */
 
 .separator__loja {
@@ -1539,16 +1547,23 @@ main {
 
 /* Container Loja */
 
+.container__produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
 .produto__card__image {
   border-radius: 5px 5px 0px 0px;
 }
 
 .item__produto {
+  height: 100%;
   width: 100%;
 }
 
 .produto__card__image {
   width: 100%;
+  height: 100%;
 }
 
 
@@ -1577,7 +1592,7 @@ main {
 }
 
 .produto__preco {
-  color: green;
+  color: red;
   font-weight: bold;
   font-size: 30px;
 }
@@ -1604,7 +1619,6 @@ main {
 .produto__btn:hover {
   opacity: .7;
 }
-
 
 
 
@@ -1747,8 +1761,44 @@ main {
 }
 
 /* Moblie */
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   /* Loja */
+
+  .loja__item__destaque {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .container__loja {
+    padding: 0rem 4svw;
+  }
+
+  .item__destaque__header {
+    opacity: .6;
+  }
+
+  .loja__subtitle {
+    font-size: 15px;
+  }
+
+  .loja__item__image {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .item__destaque__title {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .item__destaque__description {
+    font-size: 15px;
+  }
+
+  .item__destaque__btn {
+    width: 100%;
+  }
+
 
   /* Botões */
   .container__actions {

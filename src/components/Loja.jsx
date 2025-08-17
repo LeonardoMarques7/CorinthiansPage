@@ -9,7 +9,7 @@ const Loja = () => {
 	return (
 		<section className="container__loja" id="Loja">
 			<div className="loja__header">
-				<h2 className="loja__title">Loja Oficial do Corinthians</h2>
+				<h2 className="loja__title">Loja</h2>
 				<span className="loja__subtitle">
 					Os produtos abaixo são vendidos na loja oficial da Nike. Ao clicar,
 					você será redirecionado para o site oficial.
@@ -49,7 +49,7 @@ const Loja = () => {
 					</div>
 				</div>
 				<div className="separator__loja">COLEÇÃO COMPLETA</div>
-				<ul className="gap-10 items-center grid grid-cols-3">
+				<ul className="gap-10 items-center container__produtos">
 					<li className="item__produto">
 						<div className="produto__header__card">
 							<img
