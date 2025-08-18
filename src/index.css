@@ -97,21 +97,15 @@ nav {
   object-fit: cover;
   width: 100%;
   transition: .5s ease-in-out;
-  top: 2svh;
+  top: 5svh;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
 }
 
-@media (min-width: 800px) {
+@media (width <= 95rem) {
   .logo__corinthians {
-    top: 1svh;
-  }
-}
-
-@media (min-width: 90rem) {
-  .logo__corinthians {
-    top: 4.5svh;
+    top: 2.5svh;
   }
 }
 
@@ -1117,7 +1111,7 @@ main {
   position: relative;
   height: 19rem;
   object-fit: cover;
-  object-position: top;
+  object-position: bottom;
   background-color: #000000a2;
   border-radius: 10px;
 }
@@ -1417,7 +1411,7 @@ main {
 /* Loja */
 
 .container__loja {
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
 }
 
 .container__destaque {
@@ -1604,7 +1598,7 @@ main {
   max-width: 600px;
   min-height: 
   650px;
-  max-height: 850px;
+  max-height: auto;
   border-radius: 16px;
   background: rgba(87, 87, 87, 0.2);
   backdrop-filter: blur(10px);
@@ -2079,7 +2073,7 @@ main {
   }
 
   .titulo__texts {
-      padding: 4svw;
+    padding: 4svw;
   }
 
   .container__titulo {
@@ -2157,7 +2151,7 @@ main {
   }
 
   .carroseul__proximo,
-  .carroseul__ {
+  .carroseul__voltar {
     padding: 15px;
     position: static;
     height: 25px;
@@ -2175,7 +2169,7 @@ main {
     max-width: 70svw;
     width: 100%;
     border-radius: 5px;
-    height: 80px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
