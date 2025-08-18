@@ -22,13 +22,19 @@ const Historia = () => {
 	});
 
 	return (
-		<div className="overflow-x-hidden relative">
+		<>
+			<div className="container__historia !p-[2svw]">
+				<h1 className="container__title">História</h1>
+			</div>
 			<ul
 				ref={sliderRef}
-				className="keen-slider timeline timeline-snap-icon timeline-horizontal"
+				className="keen-slider timeline !items-end !mb-25 !mt-[-40rem] !max-h-auto !justify-start timeline-snap-icon timeline-compact cursor-grab"
 			>
 				{timelineData.map((item, index) => (
-					<li key={index} className="keen-slider__slide my-28 !w-full relative">
+					<li
+						key={index}
+						className="keen-slider__slide px-6 py-10 relative flex flex-col items-center"
+					>
 						{index !== 0 && <hr />}
 
 						{/* Ano + bolinha alinhados no meio */}
@@ -42,7 +48,7 @@ const Historia = () => {
 						<div
 							className={`flex flex-col gap-3 !p-10 mt-4 ${
 								index % 2 === 0
-									? "timeline-start justify-center flex-col-reverse md:text-end items-start"
+									? "timeline-start justify-center md:text-start items-"
 									: "timeline-end justify-center items-start"
 							}`}
 						>
@@ -50,7 +56,7 @@ const Historia = () => {
 								{item.title}
 							</div>
 
-							<p className="text-lg w-full leading-relaxed !max-w-auto">
+							<p className="text-lg w-full leading-relaxed min-h-[40rem] max-h-[40rem]">
 								{item.text}
 							</p>
 						</div>
@@ -59,7 +65,7 @@ const Historia = () => {
 					</li>
 				))}
 			</ul>
-		</div>
+		</>
 	);
 };
 

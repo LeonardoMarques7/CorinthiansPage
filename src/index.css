@@ -241,7 +241,10 @@ main {
 
 .container__carroseul::after,
 .container__carroseul::before,
-.container__carroseul:active {
+.container__carroseul:active,
+.keen-slider::after,
+.keen-slider::before,
+.keen-slider:active {
   cursor: grabbing;
 }
 
@@ -480,6 +483,15 @@ main {
   font-family: BigNoodle;
   font-size: 1.5rem;
 }
+
+
+.keen-slider__slide hr {
+  border-color: white;
+  color: #fff;
+  background-color: #fff;
+}
+
+.slider__slide
 
 .container__historia {
   padding: 2svw;
