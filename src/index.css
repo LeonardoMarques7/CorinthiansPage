@@ -485,13 +485,11 @@ main {
 }
 
 
-.keen-slider__slide hr {
-  border-color: white;
-  color: #fff;
-  background-color: #fff;
-}
 
-.slider__slide
+.keen-slider {
+  margin-top: -60rem;
+  margin-bottom: -30rem;
+}
 
 .container__historia {
   padding: 2svw;
@@ -2020,6 +2018,17 @@ main {
   .container__historia {
     padding: 0svh 4svw;
   }
+
+    .keen-slider {
+      margin-top: -58rem;
+      margin-bottom: -30rem;
+    }
+
+    .slider__slide {
+      text-align: center;
+      justify-content: center;
+
+    }
 
   .container__title {
     font-size: 50px;
