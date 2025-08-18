@@ -84,6 +84,7 @@ function App() {
 			<Elenco />
 			<Separacao />
 			<Noticias />
+			<Separacao />
 			<Loja />
 			<Footer />
 
