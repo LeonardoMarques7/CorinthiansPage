@@ -472,6 +472,10 @@ main {
 
 /* História */
 
+.timeline-middle:first-child {
+  padding: 0px 40px;
+}
+
 .accordion__historia {
   font-family: BigNoodle;
   font-size: 1.5rem;
