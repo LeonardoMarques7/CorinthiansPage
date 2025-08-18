@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "daisyui";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -472,19 +473,8 @@ main {
 /* História */
 
 .accordion__historia {
-  display: flex;
-  justify-content: space-between;
   font-family: BigNoodle;
-  width: 100%;
-  align-items: center;
-  interpolate-size: allow-keywords;
   font-size: 1.5rem;
-}
-
-.accordion__historia:focus-visible {
-  outline: 1px solid #ccc;
-  border-radius: 5px;
-  padding: .5rem 1rem;
 }
 
 .container__historia {
@@ -1111,7 +1101,7 @@ main {
   position: relative;
   height: 19rem;
   object-fit: cover;
-  object-position: bottom;
+  object-position: top;
   background-color: #000000a2;
   border-radius: 10px;
 }
