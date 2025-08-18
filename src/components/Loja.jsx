@@ -40,8 +40,7 @@ const Loja = () => {
 
 							{/* Avaliação */}
 							<div className="item__destaque__rating flex items-center gap-2">
-								<span className="stars">⭐⭐⭐⭐⭐</span>
-								<span className="rating__number">4.9 (328 avaliações)</span>
+								<ProdutoRating nota={4.9} total={389} />
 							</div>
 
 							<p className="item__destaque__description">
@@ -89,10 +88,10 @@ const Loja = () => {
 					className="container__carroseul relative"
 				>
 					<div className="sombra__carroseul">
-						<CarouselContent className="carroseul__content gap-4">
+						<CarouselContent className="carroseul__content gap-5">
 							{produtosData.map((produto) => (
 								<CarouselItem
-									className="item__produto w-fit z-99 relative basis-[80svw] md:basis-1/3 sm:basis-1/3"
+									className="item__produto w-fit z-99 relative basis-[80svw] lg:basis-1/4 sm:basis-1/3"
 									key={produto.id}
 								>
 									<div className="produto__header__card">
