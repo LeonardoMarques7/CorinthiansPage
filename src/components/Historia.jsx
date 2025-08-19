@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 const Historia = () => {
 	const [sliderRef, slider] = useKeenSlider({
-		loop: true, // Mantém o loop infinito
+		loop: false, // Mantém o loop infinito
 		mode: "snap",
 		slides: {
 			perView: 3,
@@ -32,7 +32,7 @@ const Historia = () => {
 				{timelineData.map((item, index) => (
 					<li
 						key={index}
-						className="keen-slider__slide py-10 relative flex flex-col items-center"
+						className="keen-slider__slide first:!ml-[2svw] py-10 relative flex flex-col items-center"
 					>
 						{index !== 0 && (
 							<hr className="!bg-white !border-white !text-white" />
@@ -45,14 +45,14 @@ const Historia = () => {
 						</div>
 
 						<div
-							className={`flex flex-col gap-3 justify-center !mx-5 items-center !py-10 ${
+							className={`flex flex-col gap-3 justify-start !mx-[.5rem] items-start !py-10 ${
 								index % 2 === 0 ? "timeline-start " : "timeline-end "
 							}`}
 						>
-							<div className="text-xl font-black accordion__historia">
+							<div className="text-xl font-black  text-start accordion__historia">
 								{item.title}
 							</div>
-							<p className="text-lg w-full leading-relaxed min-h-[50rem] max-h-[50rem]">
+							<p className="text-lg w-full leading-relaxed min-h-[50rem] max-h-[50rem] ">
 								<div className="texts__historia !line-clamp-10 overflow-hidden ">
 									{item.text}
 								</div>
