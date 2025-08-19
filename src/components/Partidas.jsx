@@ -1,4 +1,4 @@
-import React from "react";
+import { useRef } from "react";
 import {
 	Carousel,
 	CarouselContent,
@@ -13,29 +13,25 @@ import timeNull from "../assets/imagens/times/timeNull.png";
 import partidasData from "../assets/partidasData";
 
 const Partidas = () => {
+	const autoplay = useRef(
+		Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })
+	);
+
 	return (
-		<section className="section__partidas mx-auto w-full">
+		<section className="section__partidas mx-auto h-full w-full">
 			<div className="header__texts__partidas">
 				<h1 className="container__title">Partidas </h1>
-				<span className="container__subtitle flex items-center gap-4">
-					Arraste para o lado para ver mais partias
-					<ArrowRight />
-				</span>
 			</div>
 
 			<Carousel
-				plugins={[
-					Autoplay({
-						delay: 7000,
-					}),
-				]}
-				className="container__carroseul w-full mx-auto h-full flex flex-col"
+				plugins={[autoplay.current]}
+				className="container__carroseul z-1 w-full mx-auto h-full flex flex-col"
 			>
 				<CarouselContent className="carroseul__content flex items-center gap-10">
 					{partidasData.map((partida, idx) => (
 						<CarouselItem
 							key={idx}
-							className={`carroseul__item w-fit z-99 basis-auto relative ${
+							className={`carroseul__item w-fit z-99  basis-auto relative ${
 								idx % 2 === 0 ? "partida__primary" : "partida__secondary"
 							}`}
 						>

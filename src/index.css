@@ -218,7 +218,7 @@ main {
 
 /* Partidas */
 
-.section__partidas {
+.header__texts__partidas {
   padding: 0svh 2svw;
 }
 
@@ -228,11 +228,14 @@ main {
   position: relative;
   align-items: center;
   justify-content: end;
-  margin-top: 1rem;
   gap: 1rem;
   position: left;
   cursor: pointer;
   width: auto;
+}
+
+.container__carroseul {
+  padding-top: 2rem;
 }
 
 .container__carroseul:hover{
@@ -328,8 +331,9 @@ main {
   font-family: bigNoodle;
 }
 
-.carroseul__item {
-  border-radius: 10px !important;
+
+.carroseul__item:last-child {
+  border-radius: 0px !important;
 }
 
 .badge__partida {
@@ -449,8 +453,16 @@ main {
 }
 
 .badge__partida {
-  border-radius: 9px !important;
+  border-radius: 10px;
   border: .5px solid #fff;
+}
+
+.carroseul__item:first-child .badge__partida{
+  border-radius: 0px 10px 10px 0px;
+}
+
+.carroseul__item:last-child .badge__partida{
+  border-radius: 10px 0px 0px 10px;
 }
 
 .partida__primary .badge__partida {
