@@ -58,9 +58,14 @@
 
 :root {
   font-family: RadioCanadaBig;
+  
+
+}
+
+body {
   color: rgba(255, 255, 255);
-  background-image: linear-gradient(to "#313131");
-  background: #313131;
+    background-image: linear-gradient(to "#313131");
+    background: #313131;
     background: linear-gradient(90deg, rgba(49, 49, 49, 1) 0%, rgba(0, 0, 0, 1) 100%);
     --sidebar: hsl(0 0% 98%);
     --sidebar-foreground: hsl(240 5.3% 26.1%);
@@ -70,7 +75,6 @@
     --sidebar-accent-foreground: hsl(240 5.9% 10%);
     --sidebar-border: hsl(220 13% 91%);
     --sidebar-ring: hsl(217.2 91.2% 59.8%);
-
 }
 
 @font-face {
@@ -480,6 +484,8 @@ main {
   width: 100%;
   bottom: 0svh;
   position: relative;
+  z-index: 1;
+  background-color: transparent;
 }
 
 .footer__partida {
@@ -1971,29 +1977,21 @@ main {
    /* Main */
    main {
     padding: 0svh 4svw;
-    margin-top: 2svh;
+    margin-top: 0;
     position: relative;
     overflow: hidden;
    }
 
   .main__image {
-    width: 100%;
-    /* ou um valor que não ultrapasse */
-    max-width: 60vw;
-    /* limita o máximo */
-    height: auto;
-    position: absolute;
-    top: 0;
-    /* sem deslocar pra cima */
-    right: 0;
-    filter: drop-shadow(0px 0px 25px #242424);
-    z-index: -1;
+    width: 60svw;
+    bottom: 8svh;
     clip-path: inset(0);
+    z-index: 1;
   }
 
   .main__texts {
   max-width: 50svw;
-
+    margin-top: 2svh;
   }
 
   .main__title {
@@ -2002,12 +2000,6 @@ main {
 
   .main__subtitle {
   font-size: 20px;
-  }
-
-  .main__image {
-    width: 60svw;
-    top: -5svh;
-    right: -10svw;
   }
 
   /* História */
@@ -2459,6 +2451,6 @@ main {
 @media (width <= 500px) {
   .carroseul__item {
     flex-basis: auto;
-    min-width: 90svw;
+    min-width: 95svw;
   }
 }
