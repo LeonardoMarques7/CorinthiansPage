@@ -1,15 +1,15 @@
-import LogoCorinthians from "../assets/imagens/times/logoCorinthians.png";
-import LogoJuventude from "../assets/imagens/times/logoJuventude.png";
-import LogoBahia from "../assets/imagens/times/logoBahia.png";
-import LogoVasco from "../assets/imagens/times/logoVasco.png";
-import LogoPalmeiras from "../assets/imagens/times/logoPalmeiras.png";
-import LogoFluminense from "../assets/imagens/times/logoFluminense.png";
-import LogoSport from "../assets/imagens/times/logoSport.png";
-import LogoFlamengo from "../assets/imagens/times/logoFlamengo.png";
-import LogoInternacional from "../assets/imagens/times/logoInternacional.png";
-import LogoMirassol from "../assets/imagens/times/logoMirassol.png";
-import LogoSantos from "../assets/imagens/times/logoSantos.png";
-import LogoAtleticoMG from "../assets/imagens/times/logoAtleticoMG.png";
+import LogoCorinthians from "../assets/imagens/times/logoCorinthians.png?format=webp";
+import LogoJuventude from "../assets/imagens/times/logoJuventude.png?format=webp";
+import LogoBahia from "../assets/imagens/times/logoBahia.png?format=webp";
+import LogoVasco from "../assets/imagens/times/logoVasco.png?format=webp";
+import LogoPalmeiras from "../assets/imagens/times/logoPalmeiras.png?format=webp";
+import LogoFluminense from "../assets/imagens/times/logoFluminense.png?format=webp";
+import LogoSport from "../assets/imagens/times/logoSport.png?format=webp";
+import LogoFlamengo from "../assets/imagens/times/logoFlamengo.png?format=webp";
+import LogoInternacional from "../assets/imagens/times/logoInternacional.png?format=webp";
+import LogoMirassol from "../assets/imagens/times/logoMirassol.png?format=webp";
+import LogoSantos from "../assets/imagens/times/logoSantos.png?format=webp";
+import LogoAtleticoMG from "../assets/imagens/times/logoAtleticoMG.png?format=webp";
 
 const partidasData = [
 	{

@@ -1,6 +1,6 @@
 import React from "react";
-import trofeuMundial from "../assets/imagens/titulos/mundial1.png";
-import trofeuMundial2 from "../assets/imagens/titulos/mundial2.png";
+import trofeuMundial from "../assets/imagens/titulos/mundial1.png?format=webp";
+import trofeuMundial2 from "../assets/imagens/titulos/mundial2.png?format=webp";
 import titulosData from "../assets/titulosData";
 
 const Titulos = () => {

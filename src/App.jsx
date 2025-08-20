@@ -1,7 +1,6 @@
 import { motion, useScroll } from "framer-motion";
 import "./App.css";
 import Header from "./components/Header";
-import Historia from "./components/Historia";
 import Main from "./components/Main";
 import Titulos from "./components/Titulos";
 import Separacao from "./components/Separacao";
@@ -15,10 +14,14 @@ import { Button } from "@/components/ui/button";
 import { ChevronUpIcon, Quote } from "lucide-react";
 import useIsMobile from "./components/hooks/useIsMoblie";
 import Loja from "./components/Loja";
+import { useInView } from "react-intersection-observer";
+import { lazy, Suspense } from "react";
+const Historia = lazy(() => import("./components/Historia"));
 
 // ... seus contatosLendarios
 
 function App() {
+	const { ref, inView } = useInView({ triggerOnce: true });
 	const { scrollYProgress } = useScroll(); // Progresso da rolagem
 	const [mostrarBotao, setMostrarBotao] = useState(false);
 	const mainRef = useRef(null);
@@ -77,7 +80,13 @@ function App() {
 				<Partidas />
 			</div>
 
-			<Historia />
+			<div ref={ref}>
+				{inView && (
+					<Suspense fallback={<div>Carregando história...</div>}>
+						<Historia />
+					</Suspense>
+				)}
+			</div>
 			<Separacao />
 			<Titulos />
 			<Separacao />

@@ -1,5 +1,5 @@
 import React from "react";
-import SeparacaoImg from "../assets/imagens/emblema__header.png";
+import SeparacaoImg from "../assets/imagens/emblema__header.png?format=webp";
 
 const Separacao = () => {
 	return (

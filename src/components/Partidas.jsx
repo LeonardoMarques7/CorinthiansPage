@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { ArrowRight, ChevronRight } from "lucide-react";
-import timeNull from "../assets/imagens/times/timeNull.png";
+import timeNull from "../assets/imagens/times/timeNull.png?format=webp";
 
 import partidasData from "../assets/partidasData";
 

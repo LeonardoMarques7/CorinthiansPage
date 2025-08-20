@@ -1,8 +1,8 @@
-import noticia1 from "../assets/imagens/noticias/noticia1.png";
-import noticia2 from "../assets/imagens/noticias/noticia2.png";
-import noticia3 from "../assets/imagens/noticias/noticia3.png";
-import noticia4 from "../assets/imagens/noticias/noticia4.png";
-import noticia5 from "../assets/imagens/noticias/noticia5.png";
+import noticia1 from "../assets/imagens/noticias/noticia1.png?format=webp";
+import noticia2 from "../assets/imagens/noticias/noticia2.png?format=webp";
+import noticia3 from "../assets/imagens/noticias/noticia3.png?format=webp";
+import noticia4 from "../assets/imagens/noticias/noticia4.png?format=webp";
+import noticia5 from "../assets/imagens/noticias/noticia5.png?format=webp";
 
 const noticiasData = [
 	{

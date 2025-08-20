@@ -1,11 +1,11 @@
-import foto1 from '../assets/imagens/titulos/mundial1.png';
-import foto2 from '../assets/imagens/titulos/mundial2.png';
-import foto3 from '../assets/imagens/titulos/libertadores.png';
-import foto4 from '../assets/imagens/titulos/recopa.png';
-import foto5 from '../assets/imagens/titulos/brasileirao.png';
-import foto6 from '../assets/imagens/titulos/copa__brasil.png';
-import foto7 from '../assets/imagens/titulos/paulista.png';
-import foto8 from '../assets/imagens/titulos/torneio.png';
+import foto1 from '../assets/imagens/titulos/mundial1.png?format=webp';
+import foto2 from '../assets/imagens/titulos/mundial2.png?format=webp';
+import foto3 from '../assets/imagens/titulos/libertadores.png?format=webp';
+import foto4 from '../assets/imagens/titulos/recopa.png?format=webp';
+import foto5 from '../assets/imagens/titulos/brasileirao.png?format=webp';
+import foto6 from '../assets/imagens/titulos/copa__brasil.png?format=webp';
+import foto7 from '../assets/imagens/titulos/paulista.png?format=webp';
+import foto8 from '../assets/imagens/titulos/torneio.png?format=webp';
 
 const titulosData = [
   {

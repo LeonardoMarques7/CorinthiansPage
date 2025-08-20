@@ -1,11 +1,11 @@
-import camisaAwayTorcedor2024 from "./imagens/produtos/camisa-away-torcedor-2024.png";
-import camisaHomeTorcedor2025 from "./imagens/produtos/camisa-home-torcedor-2025.png";
-import blusaoCorinthiansInfantil from "./imagens/produtos/blusa-infantil.png";
-import jaquetaCorinthians from "./imagens/produtos/jaqueta-masculina.png";
-import camisaAwayFerminina2025 from "./imagens/produtos/camisa-away-feminina-torcedor-2025.png";
-import camisaHomeTorcedorInfantil2025 from "./imagens/produtos/camisa-away-infantil-torcedor-2025.png";
-import calcaMasculina from "./imagens/produtos/calca-masculina.png";
-import camisaHome2024 from "./imagens/produtos/camisa-home-torcedor-2024.png";
+import camisaAwayTorcedor2024 from "./imagens/produtos/camisa-away-torcedor-2024.png?format=webp";
+import camisaHomeTorcedor2025 from "./imagens/produtos/camisa-home-torcedor-2025.png?format=webp";
+import blusaoCorinthiansInfantil from "./imagens/produtos/blusa-infantil.png?format=webp";
+import jaquetaCorinthians from "./imagens/produtos/jaqueta-masculina.png?format=webp";
+import camisaAwayFerminina2025 from "./imagens/produtos/camisa-away-feminina-torcedor-2025.png?format=webp";
+import camisaHomeTorcedorInfantil2025 from "./imagens/produtos/camisa-away-infantil-torcedor-2025.png?format=webp";
+import calcaMasculina from "./imagens/produtos/calca-masculina.png?format=webp";
+import camisaHome2024 from "./imagens/produtos/camisa-home-torcedor-2024.png?format=webp";
 
 const produtosData = [
 	{

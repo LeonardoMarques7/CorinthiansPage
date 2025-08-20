@@ -1,9 +1,9 @@
 import React from "react";
-import logoCorinthians from "../assets/imagens/logo__pequena__normal.png";
-import LogoInsta from "../assets/imagens/logo__insta.png";
-import LogoYouTube from "../assets/imagens/logo__yt.png";
-import LogoTikTok from "../assets/imagens/logo__ttk.png";
-import LogoX from "../assets/imagens/logo__x.png";
+import logoCorinthians from "../assets/imagens/logo__pequena__normal.png?format=webp";
+import LogoInsta from "../assets/imagens/logo__insta.png?format=webp";
+import LogoYouTube from "../assets/imagens/logo__yt.png?format=webp";
+import LogoTikTok from "../assets/imagens/logo__ttk.png?format=webp";
+import LogoX from "../assets/imagens/logo__x.png?format=webp";
 
 const Footer = () => {
 	return (

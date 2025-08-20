@@ -1,5 +1,5 @@
 import { Expand, ShoppingCart } from "lucide-react";
-import camisaAwayTorcedor2025 from "../assets/imagens/produtos/camisa-away-torcedor-2025.png";
+import camisaAwayTorcedor2025 from "../assets/imagens/produtos/camisa-away-torcedor-2025.png?format=webp";
 import produtosData from "../assets/produtosData";
 import {
 	Carousel,
