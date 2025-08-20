@@ -19,7 +19,7 @@ const Main = () => {
 				/>
 			</main>
 			<img
-				className="main__faixas"
+				className="main__faixa"
 				src={faixas}
 				alt="Faixas de Apoio do Corinthians"
 			/>
