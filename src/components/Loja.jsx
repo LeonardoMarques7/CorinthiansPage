@@ -88,10 +88,10 @@ const Loja = () => {
 					className="container__carroseul relative"
 				>
 					<div className="sombra__carroseul">
-						<CarouselContent className="carroseul__content gap-5">
+						<CarouselContent className="carroseul__content first:!mx-[2svw] gap-5">
 							{produtosData.map((produto) => (
 								<CarouselItem
-									className="item__produto w-fit z-99 relative basis-[80svw] lg:basis-1/4 sm:basis-1/3"
+									className="item__produto  w-fit z-99 relative basis-[80svw] lg:basis-1/4 sm:basis-1/3"
 									key={produto.id}
 								>
 									<div className="produto__header__card">
