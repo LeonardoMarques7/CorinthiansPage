@@ -2501,6 +2501,10 @@ main {
     text-wrap: nowrap;
   }
 
+  .item__jogador {
+    flex-basis: 3;
+  }
+
   
 
 }
@@ -2578,6 +2582,7 @@ main {
 
   .item__jogador {
     flex-basis: 2;
+    width: ;
   }
 }
 
@@ -2596,9 +2601,6 @@ main {
     object-fit: cover;
   }
 
-  .item__jogador {
-    flex-basis: 3;
-  }
 
   .loja__item__destaque {
     flex-direction: column;
