@@ -2500,13 +2500,6 @@ main {
     width: 100%;
     text-wrap: nowrap;
   }
-
-  .item__jogador {
-    flex-basis: 3;
-  }
-
-  
-
 }
 
 @media (width <= 500px) {
@@ -2578,11 +2571,6 @@ main {
 @media (width <=800px) {
   .carroseul__item {
     flex-basis: calc(1/2 * 100%);
-  }
-
-  .item__jogador {
-    flex-basis: 2;
-    width: ;
   }
 }
 
