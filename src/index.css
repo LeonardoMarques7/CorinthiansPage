@@ -157,6 +157,8 @@ nav {
   .logo__corinthians {
     top: 2.5svh;
   }
+
+  
 }
 
 .container__links {
@@ -235,8 +237,8 @@ nav {
 main {
   padding: 0svw 2svw;
   margin-top: 5svh;
-  position: relative;
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
 }
@@ -255,15 +257,32 @@ main {
   font-size: 25px;
 }
 
+
 .main__image {
-  width: 40svw;
-  top: -8svh;
+  width: 50svw;
+  transition: .5s ease-in-out;
+  top: -9rem;
   height: auto;
   position: sticky;
   filter: drop-shadow(0px 0px 25px #242424);
-  position: absolute; 
+  position: absolute;
   right: 0;
   z-index: 1;
+}
+  
+@media (width >=95rem) {
+  .main__image {
+    width: 40svw;
+    top: -8rem;
+    clip-path: inset(0);
+    overflow: hidden;
+    height: auto;
+    position: sticky;
+    filter: drop-shadow(0px 0px 25px #242424);
+    position: absolute;
+    right: 0;
+    z-index: 1;
+  }
 }
 
 /* Partidas */
@@ -336,17 +355,13 @@ main {
   }
 }
 
-
 @media (width <= 90rem) {
   .carroseul__item {
-    flex-basis:calc(1/2 * 100%);
-  }
-
-  
-  .section__partidas {
-    padding: 0svh 2svw;
+    flex-basis: calc(1/4 * 100%)
   }
 }
+
+
 
 .container__actions__carroseul {
   top: 1rem;
@@ -1498,19 +1513,20 @@ main {
   border: 2px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   display: flex;
+  flex-direction: column;
   gap: 3rem;
 }
 
 .loja__item__image{
-  max-width: 512px;
-  min-width: 512px;
+  max-width: auto;
+  min-width: 100%;
   max-height: 600px;
-  border-radius: 16px 0px 0px 16px;
+  border-radius: 16px 16px 0px 0px;
   object-fit: cover;
 }
 
 .item__destaque__texts {
-  padding: 2rem 0rem;
+  padding-bottom: 2rem;
 }
 
 .item__destaque__header {
@@ -1525,6 +1541,10 @@ main {
   height: 5px;
 }
 
+
+.item__destaque__content, .item__destaque__header, .item__destaque__footer{
+  padding: 0px 2rem;
+}
 
 .item__destaque__content, .produto__content__card {
   display: flex;
@@ -1558,6 +1578,7 @@ main {
 
 .item__destaque__footer {
   display: flex;
+  flex-direction: column-reverse;
   gap: 1rem;
 }
 
@@ -1808,7 +1829,7 @@ main {
 
 @media (width >= 90rem) {
   .item__jogador {
-    flex-basis: calc(1/5 * 100%)
+    flex-basis: calc(1/6 * 100%)
   }
 
 }
@@ -1862,6 +1883,21 @@ main {
     font-size: 12px;
   }
 
+  .badge__jogador {
+    font-family: BigNoodle;
+    font-weight: 500;
+    font-size: 25px;
+    border: 10px solid red;
+    max-width: 70svw;
+    width: 100%;
+    border-radius: 5px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px -10px 0px 0px #ddd;
+  }
+
 }
 
 .header__moblie {
@@ -1869,7 +1905,11 @@ main {
 }
 
 /* Moblie */
-@media (width <= 90rem) {
+@media (width <= 768px) {
+
+  .container__destaques {
+    flex-direction: column;
+  }
   /* Loja */
 
   .loja__item__destaque {
@@ -1976,18 +2016,8 @@ main {
    }
 
    /* Main */
-   main {
-    padding: 0svh 4svw;
-    margin-top: 0;
-    position: relative;
-    overflow: hidden;
-   }
-
-  .main__image {
-    width: 60svw;
-    clip-path: inset(0);
-    z-index: 1;
-  }
+   
+  
 
   .main__texts {
   max-width: 50svw;
@@ -2409,7 +2439,7 @@ main {
 
 /* Reponsividade */
 
-@media (width <= 768px) {
+@media (width <= 900px) {
   .logo__corinthians {
     max-width: 80px;
     position: relative;
@@ -2446,6 +2476,63 @@ main {
     text-align: start;
   }
 
+  .card__noticia {
+    flex-direction: column;
+    font-size: 20px !important;
+    gap: .5rem;
+  }
+
+
+  .container__badges {
+    display: flex;
+    width: 100%;
+  }
+
+  .image__noticia {
+    max-height: 300px;
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .image__noticia img {
+    border: 2px solid #aaa;
+    border-radius: 15px;
+    object-fit: cover;
+    min-height: auto;
+    height: 100%;
+    min-width: 100%;
+  }
+
+  .container__other .container__noticias {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    padding: 2rem 0rem;
+    gap: 2rem;
+  }
+
+  .image__other .card__image {
+    min-width: 50svw;
+    height: 200px;
+    width: 100%;
+    max-width: 250px;
+    max-height: 350px;
+    object-fit: cover;
+    border: 2px solid #75757586;
+    filter: grayscale(10%);
+    transition: 1s ease-in-out;
+    border-radius: 7px;
+  }
+
+  .header__noticia {
+    flex-grow: 1;
+    width: 100%;
+    text-wrap: nowrap;
+  }
+
+  
+
 }
 
 @media (width <= 500px) {
@@ -2453,4 +2540,78 @@ main {
     flex-basis: auto;
     min-width: 95svw;
   }
+}
+
+
+@media (width <= 700px) {
+  main {
+      padding: 0svh 4svw;
+      margin-top: 0;
+      position: relative;
+    }
+    
+  .main__image {
+    width: 60svw;
+    top: 2rem;
+    height: auto;
+  }
+
+  .section__partidas {
+    padding: 0rem 2svw;
+  }
+}
+
+
+
+@media (width <=800px) {
+  .carroseul__item {
+    flex-basis: calc(1/2 * 100%);
+  }
+
+  .item__jogador {
+    flex-basis: 2;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+  .main__image {
+    height: auto;
+    width: 60svw;
+    top: -5svh;
+  }
+
+  .image__titulo,
+  .image__titulo_2 {
+    height: 200px;
+    max-width: 250px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .item__jogador {
+    flex-basis: 3;
+  }
+
+  .loja__item__destaque {
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+  }
+
+  .item__destaque__content, .item__destaque__header, .item__destaque__footer {
+    padding: 0px 20px;
+  }
+
+  .loja__item__image {
+    border: transparent 1px solid;
+    border-radius: 16px 16px 0px 0px;
+    max-width: 100%;
+    min-width: auto;
+    min-height: auto;
+    max-height: 250px;
+    object-fit: cover;
+  }
+
+  
+
 }

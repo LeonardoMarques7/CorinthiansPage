@@ -22,56 +22,116 @@ const Loja = () => {
 						você será redirecionado para o site oficial.
 					</span>
 				</div>
-				<div className="loja__item__destaque">
-					<img
-						src={camisaAwayTorcedor2025}
-						className="loja__item__image"
-						alt="Camisa Away Corinthians 2025"
-					/>
-					<div className="item__destaque__texts">
-						<div className="item__destaque__header">
-							Camisas <div className="separacao__div"></div> Edição Especial
-						</div>
-
-						<div className="item__destaque__content">
-							<h2 className="item__destaque__title">
-								Camiseta Away Torcedor Corinthians 2025
-							</h2>
-
-							{/* Avaliação */}
-							<div className="item__destaque__rating flex items-center gap-2">
-								<ProdutoRating nota={4.9} total={389} />
+				<div className="container__destaques flex gap-4">
+					<div className="loja__item__destaque">
+						<img
+							src={camisaAwayTorcedor2025}
+							className="loja__item__image"
+							alt="Camisa Away Corinthians 2025"
+						/>
+						<div className="item__destaque__texts">
+							<div className="item__destaque__header">
+								Camisas <div className="separacao__div"></div> Edição Especial
 							</div>
 
-							<p className="item__destaque__description">
-								Mostre sua paixão pelo Timão com a{" "}
-								<strong>Camiseta Away Torcedor Corinthians 2025</strong>. Um
-								manto moderno que une tradição, estilo e conforto. Feita para o
-								torcedor que vive o Corinthians dentro e fora dos estádios.
-							</p>
+							<div className="item__destaque__content">
+								<h2 className="item__destaque__title">
+									Camiseta Away Torcedor Corinthians 2025
+								</h2>
 
-							<ul className="item__destaque__list">
-								<li>✔ Modelo Away 2025 – Torcedor</li>
-								<li>✔ Tecido leve e respirável</li>
-								<li>✔ Escudo oficial em destaque</li>
-								<li>✔ Ideal para jogos e uso casual</li>
-								<li>✔ Design moderno inspirado na Fiel</li>
-							</ul>
+								{/* Avaliação */}
+								<div className="item__destaque__rating flex items-center gap-2">
+									<ProdutoRating nota={4.9} total={389} />
+								</div>
+
+								<p className="item__destaque__description">
+									Mostre sua paixão pelo Timão com a{" "}
+									<strong>Camiseta Away Torcedor Corinthians 2025</strong>. Um
+									manto moderno que une tradição, estilo e conforto. Feita para
+									o torcedor que vive o Corinthians dentro e fora dos estádios.
+								</p>
+
+								<ul className="item__destaque__list">
+									<li>✔ Modelo Away 2025 – Torcedor</li>
+									<li>✔ Tecido leve e respirável</li>
+									<li>✔ Escudo oficial em destaque</li>
+									<li>✔ Ideal para jogos e uso casual</li>
+									<li>✔ Design moderno inspirado na Fiel</li>
+								</ul>
+							</div>
+
+							<div className="item__destaque__footer">
+								<button
+									onClick={() =>
+										(window.location.href =
+											"https://www.nike.com.br/camisa-nike-corinthians-ii-2025-26-torcedor-pro-masculina-058825.html")
+									}
+									className="item__destaque__btn"
+								>
+									Comprar Agora
+								</button>
+								<div className="item__destaque__badge">
+									<span className="item__destaque__preco">R$ 299,90</span>
+									<span className="item__destaque__preco__antigo">
+										R$ 349,90
+									</span>
+								</div>
+							</div>
 						</div>
+					</div>
+					<div className="loja__item__destaque">
+						<img
+							src={camisaAwayTorcedor2025}
+							className="loja__item__image"
+							alt="Camisa Away Corinthians 2025"
+						/>
+						<div className="item__destaque__texts">
+							<div className="item__destaque__header">
+								Camisas <div className="separacao__div"></div> Edição Especial
+							</div>
 
-						<div className="item__destaque__footer">
-							<button
-								onClick={() =>
-									(window.location.href =
-										"https://www.nike.com.br/camisa-nike-corinthians-ii-2025-26-torcedor-pro-masculina-058825.html")
-								}
-								className="item__destaque__btn"
-							>
-								Comprar Agora
-							</button>
-							<div className="item__destaque__badge">
-								<span className="item__destaque__preco">R$ 299,90</span>
-								<span className="item__destaque__preco__antigo">R$ 349,90</span>
+							<div className="item__destaque__content">
+								<h2 className="item__destaque__title">
+									Camiseta Away Torcedor Corinthians 2025
+								</h2>
+
+								{/* Avaliação */}
+								<div className="item__destaque__rating flex items-center gap-2">
+									<ProdutoRating nota={4.9} total={389} />
+								</div>
+
+								<p className="item__destaque__description">
+									Mostre sua paixão pelo Timão com a{" "}
+									<strong>Camiseta Away Torcedor Corinthians 2025</strong>. Um
+									manto moderno que une tradição, estilo e conforto. Feita para
+									o torcedor que vive o Corinthians dentro e fora dos estádios.
+								</p>
+
+								<ul className="item__destaque__list">
+									<li>✔ Modelo Away 2025 – Torcedor</li>
+									<li>✔ Tecido leve e respirável</li>
+									<li>✔ Escudo oficial em destaque</li>
+									<li>✔ Ideal para jogos e uso casual</li>
+									<li>✔ Design moderno inspirado na Fiel</li>
+								</ul>
+							</div>
+
+							<div className="item__destaque__footer">
+								<button
+									onClick={() =>
+										(window.location.href =
+											"https://www.nike.com.br/camisa-nike-corinthians-ii-2025-26-torcedor-pro-masculina-058825.html")
+									}
+									className="item__destaque__btn"
+								>
+									Comprar Agora
+								</button>
+								<div className="item__destaque__badge">
+									<span className="item__destaque__preco">R$ 299,90</span>
+									<span className="item__destaque__preco__antigo">
+										R$ 349,90
+									</span>
+								</div>
 							</div>
 						</div>
 					</div>
